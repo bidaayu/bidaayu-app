@@ -55,6 +55,53 @@ body, html {
   display: flex;
   height: 100vh;
   overflow: hidden;
+  position: relative;
+}
+
+/* Tombol Hamburger untuk Mobile */
+.hamburger-btn {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+  background: var(--primary-gradient);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: var(--shadow-lg);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-btn:hover {
+  transform: scale(1.05);
+}
+
+.hamburger-btn span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
 }
 
 /* Sidebar (iframe kiri) */
@@ -62,6 +109,7 @@ body, html {
   width: 260px;
   border: none;
   height: 100vh;
+  transition: transform 0.3s ease;
 }
 
 /* Konten utama (iframe kanan) */
@@ -466,10 +514,47 @@ tr:hover td {
   font-weight: 600;
 }
 
-/* Responsive Design */
+/* Responsive Design untuk Mobile */
 @media (max-width: 768px) {
+  /* Tampilkan tombol hamburger di mobile */
+  .hamburger-btn {
+    display: flex;
+  }
+
+  /* Sidebar default tersembunyi di mobile */
   .sidebar-frame {
-    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    transform: translateX(-100%);
+    width: 280px;
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Sidebar tampil ketika menu aktif */
+  .sidebar-frame.active {
+    transform: translateX(0);
+  }
+
+  /* Overlay ketika sidebar terbuka */
+  .layout::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .layout.sidebar-open::before {
+    opacity: 1;
+    pointer-events: all;
   }
 
   .content-frame {
@@ -477,11 +562,11 @@ tr:hover td {
   }
 
   .main-content {
-    padding: 20px;
+    padding: 80px 20px 20px 20px;
   }
 
   .cards {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 12px;
   }
 
@@ -501,6 +586,32 @@ tr:hover td {
 
   header h1 {
     font-size: 1.4rem;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .chart-container {
+    padding: 20px;
+  }
+
+  .pie-wrapper {
+    height: 300px;
+  }
+
+  /* Table responsive */
+  .table-section {
+    overflow-x: auto;
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+
+  th, td {
+    padding: 10px;
   }
 }
 
