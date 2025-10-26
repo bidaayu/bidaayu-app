@@ -245,10 +245,14 @@
     }
 
     function toggleTheme() {
-      document.body.classList.toggle('dark-mode');
+      const html = document.documentElement;
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
       const btn = document.querySelector('.theme-toggle');
-      btn.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
-      loadData();
+      btn.textContent = isDark ? '🌙 Dark Mode' : '☀️ Light Mode';
+      
+      // Simpan preferensi
+      localStorage.setItem('theme', isDark ? 'light' : 'dark');
     }
 
     // 🔹 Fungsi tambahan: populate daftar kelas dari students_all.csv
@@ -283,6 +287,7 @@
   </script>
 </body>
 </html>
+
 
 
 
