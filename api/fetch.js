@@ -22,6 +22,7 @@ export default async function handler(req, res) {
     if (kelas) fluxQuery += `|> filter(fn: (r) => r.kelas == "${kelas}")`
 
     const data = []
+    console.log("🔍 Query:", fluxQuery)
     await queryApi.collectRows(fluxQuery, {
       next(row, tableMeta) {
         const o = tableMeta.toObject(row)
