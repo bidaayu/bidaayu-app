@@ -1,4 +1,13 @@
-<div class="layout">
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistem Absensi Siswa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="layout" id="layout">
     <!-- Tombol Hamburger untuk Mobile -->
     <button class="hamburger-btn" id="hamburgerBtn">
       <span></span>
@@ -16,8 +25,9 @@
   <script>
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const sidebarFrame = document.getElementById('sidebarFrame');
-    const layout = document.querySelector('.layout');
+    const layout = document.getElementById('layout');
 
+    // Toggle hamburger menu
     hamburgerBtn.addEventListener('click', function() {
       this.classList.toggle('active');
       sidebarFrame.classList.toggle('active');
@@ -53,3 +63,5 @@
       }
     });
   </script>
+</body>
+</html>
