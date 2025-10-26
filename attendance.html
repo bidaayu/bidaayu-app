@@ -763,17 +763,56 @@
       const siswa = window.studentsData.find(s => s.nis === nis);
       const nama = siswa ? siswa.nama : "";
     
-      // Tampilkan pesan sukses
-      const msg = document.getElementById("successMessage");
-      msg.classList.add("show");
-      setTimeout(() => msg.classList.remove("show"), 3000);
-      
-      // Reset form
-      document.getElementById("attendanceForm").reset();
+      const newRow = {
+        Tanggal: tanggal,
+        NIS: nis,
+        Nama: nama,
+        Kelas: kelas,
+        Status: status.charAt(0).toUpperCase() + status.slice(1)
+      };
+    
+      // Tambah data baru ke array lokal
+      attendanceData.push(newRow);
+    
+      // Simpan juga ke file CSV lokal
+      await saveCSVFile(attendanceData);
+    
+      // === Kirim ke API Vercel untuk simpan ke InfluxDB ===
+      try {
+        const response = await fetch("/api/save", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            tanggal,
+            nis,
+            nama,
+            kelas,
+            status
+          })
+        });
+    
+        const result = await response.json();
+        if (response.ok) {
+          console.log("✅ Tersimpan ke InfluxDB:", result);
+          const msg = document.getElementById("successMessage");
+          msg.classList.add("show");
+          setTimeout(() => msg.classList.remove("show"), 3000);
+        } else {
+          console.error("❌ Gagal simpan ke InfluxDB:", result.error);
+          alert("Gagal simpan ke InfluxDB: " + result.error);
+        }
+      } catch (err) {
+        console.error("❌ Error fetch:", err);
+        alert("Tidak bisa mengirim data ke server. Periksa koneksi internet atau backend API.");
+      }
     });
+
 
     // Jalankan inisialisasi
     document.addEventListener("DOMContentLoaded", initDropdowns);
   </script>
 </body>
 </html>
+
