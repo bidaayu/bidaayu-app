@@ -95,6 +95,12 @@
     let dailyChart, pieChart;
 
     document.addEventListener('DOMContentLoaded', async () => {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        const btn = document.querySelector('.theme-toggle');
+        btn.textContent = '☀️ Light Mode';
+      }
       const now = new Date();
       document.getElementById('monthSelect').value = now.getMonth() + 1;
       const yearSelect = document.getElementById('yearSelect');
@@ -287,6 +293,7 @@
   </script>
 </body>
 </html>
+
 
 
 
