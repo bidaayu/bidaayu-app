@@ -18,12 +18,18 @@ export default async function handler(req, res) {
     const influxDB = new InfluxDB({ url, token });
     const queryApi = influxDB.getQueryApi(org);
 
+    const start = `"${tahun}-${bulan.toString().padStart(2,'0')}-01T00:00:00Z"`;
+    const stopMonth = (parseInt(bulan) % 12 + 1).toString().padStart(2,'0'); 
+    const stopYear = bulan == 12 ? parseInt(tahun)+1 : tahun;
+    const stop = `"${stopYear}-${stopMonth}-01T00:00:00Z"`;
+    
+    // Flux query
     const fluxQuery = `
-      from(bucket: "${bucket}")
-        |> range(start: ${tahun}-${bulan}-01T00:00:00Z, stop: ${tahun}-${bulan + 1}-01T00:00:00Z)
-        |> filter(fn: (r) => r._measurement == "absensi")
-        |> group(columns: ["kelas", "status", "nama", "nis"])
-        |> keep(columns: ["_time", "_value", "kelas", "status", "nama", "nis"])
+    from(bucket: "${bucket}")
+      |> range(start: ${start}, stop: ${stop})
+      |> filter(fn: (r) => r._measurement == "absensi")
+      |> group(columns: ["kelas", "status", "nama", "nis"])
+      |> keep(columns: ["_time", "_value", "kelas", "status", "nama", "nis"])
     `;
 
     console.log("🔍 Query:", fluxQuery);
@@ -45,4 +51,5 @@ export default async function handler(req, res) {
     console.error("❌ Server error:", err);
     res.status(500).json({ error: "Gagal mengambil data dari InfluxDB", detail: err.message });
   }
+
 }
