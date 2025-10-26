@@ -769,13 +769,7 @@
         Nama: nama,
         Kelas: kelas,
         Status: status.charAt(0).toUpperCase() + status.slice(1)
-      };
-    
-      // Tambah data baru ke array lokal
-      attendanceData.push(newRow);
-    
-      // Simpan juga ke file CSV lokal
-      await saveCSVFile(attendanceData);
+      }
     
       // === Kirim ke API Vercel untuk simpan ke InfluxDB ===
       try {
@@ -815,4 +809,5 @@
   </script>
 </body>
 </html>
+
 
