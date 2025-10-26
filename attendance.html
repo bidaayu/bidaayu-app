@@ -51,6 +51,7 @@
       color: var(--text-primary);
       overflow-x: hidden;
       position: relative;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     body::before {
@@ -554,7 +555,7 @@
       <span class="icon">📝</span>
       Input Absensi Siswa
     </h1>
-    <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+    <button class="theme-toggle" id="themeToggle">🌙 Dark Mode</button>
   </header>
 
   <div class="form-container">
@@ -645,8 +646,6 @@
         </div>
       </div>
 
-    
-
       <div class="button-group">
         <button type="button" class="btn btn-secondary" onclick="resetForm()">
           Reset
@@ -657,8 +656,6 @@
       </div>
     </form>
 
-    
-
     <div id="successMessage" class="success-message">
       <span class="icon">🎉</span>
       <span>Data absensi berhasil disimpan!</span>
@@ -666,10 +663,40 @@
   </div>
 
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
+    // Dark Mode Toggle
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? '' : 'dark';
+      const themeToggle = document.getElementById('themeToggle');
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      
+      if (newTheme === 'dark') {
+        themeToggle.textContent = '☀️ Light Mode';
+      } else {
+        themeToggle.textContent = '🌙 Dark Mode';
+      }
+    }
+
+    // Load saved theme
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedTheme = localStorage.getItem('theme');
+      const themeToggle = document.getElementById('themeToggle');
+      
+      if (savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        themeToggle.textContent = '☀️ Light Mode';
+      }
+
+      // Set tanggal hari ini
       const today = new Date().toISOString().split("T")[0];
       document.getElementById("dateInput").value = today;
+
+      // Event listener untuk theme toggle
+      themeToggle.addEventListener('click', toggleTheme);
     });
+
     // === Fungsi membaca CSV ===
     async function loadCSV(url) {
       const response = await fetch(url);
@@ -719,106 +746,6 @@
       document.getElementById("attendanceForm").reset();
     }
 
-    // === Variabel global ===
-    let attendanceFileHandle = null;
-    let attendanceData = [];
-
-    // === Saat halaman pertama kali dimuat ===
-    window.addEventListener("DOMContentLoaded", async () => {
-      const savedHandle = localStorage.getItem("attendanceFileHandle");
-      
-      if (savedHandle) {
-        try {
-          // Coba restore handle dari storage
-          attendanceFileHandle = await getRestoredHandle();
-          if (attendanceFileHandle) {
-            const file = await attendanceFileHandle.getFile();
-            const text = await file.text();
-            attendanceData = parseCSV(text);
-            console.log("📂 File CSV otomatis dimuat:", attendanceFileHandle.name);
-            return;
-          }
-        } catch (err) {
-          console.warn("Gagal memulihkan handle file:", err);
-        }
-      }
-
-      // Jika belum ada file tersimpan → minta user pilih file CSV
-      // await selectCSVFile();
-    });
-
-    // === Fungsi pilih file CSV pertama kali ===
-    async function selectCSVFile() {
-      try {
-        [attendanceFileHandle] = await window.showOpenFilePicker({
-          types: [{ description: "CSV Files", accept: { "text/csv": [".csv"] } }],
-          excludeAcceptAllOption: true,
-          multiple: false,
-        });
-
-        const file = await attendanceFileHandle.getFile();
-        const text = await file.text();
-        attendanceData = parseCSV(text);
-
-        // Simpan handle di localStorage (persist permission)
-        const handleId = await attendanceFileHandle.requestPermission({ mode: 'readwrite' });
-        if (handleId === 'granted') {
-          localStorage.setItem("attendanceFileHandle", "true");
-        }
-
-        console.log("📁 File CSV dipilih:", attendanceFileHandle.name);
-      } catch (err) {
-        console.error("❌ Gagal memilih file CSV:", err);
-        alert("Tidak dapat membuka file CSV. Browser harus mendukung File System Access API.");
-      }
-    }
-
-    // === Fungsi untuk restore handle file lama (Chrome) ===
-    async function getRestoredHandle() {
-      const handles = await window.navigator.storage.getDirectory();
-      return attendanceFileHandle || null;
-    }
-
-    // === Parse CSV ke array objek ===
-    function parseCSV(text) {
-      const lines = text.trim().split("\n");
-      const headers = lines[0].split(",").map(h => h.trim());
-      return lines.slice(1).map(line => {
-        const values = line.split(",");
-        const obj = {};
-        headers.forEach((h, i) => obj[h] = values[i]?.replace(/(^"|"$)/g, "").trim());
-        return obj;
-      });
-    }
-
-    // === Konversi array objek ke CSV string ===
-    function toCSV(data) {
-      const headers = ["Tanggal", "NIS", "Nama", "Kelas", "Status"];
-      const csv = [
-        headers.join(","),
-        ...data.map(row => headers.map(h => `"${row[h] || ""}"`).join(","))
-      ].join("\n");
-      return csv;
-    }
-
-    // === Simpan data ke file lokal ===
-    async function saveCSVFile(data) {
-      try {
-        if (!attendanceFileHandle) {
-          await selectCSVFile();
-        }
-
-        const writable = await attendanceFileHandle.createWritable();
-        await writable.write(toCSV(data));
-        await writable.close();
-
-        alert("✅ Data absensi berhasil disimpan!");
-      } catch (err) {
-        console.error("❌ Gagal menyimpan file:", err);
-        alert("Gagal menyimpan file. Periksa izin akses browser.");
-      }
-    }
-
     // === Event: Submit Form ===
     document.getElementById("attendanceForm").addEventListener("submit", async (e) => {
       e.preventDefault();
@@ -836,57 +763,17 @@
       const siswa = window.studentsData.find(s => s.nis === nis);
       const nama = siswa ? siswa.nama : "";
     
-      const newRow = {
-        Tanggal: tanggal,
-        NIS: nis,
-        Nama: nama,
-        Kelas: kelas,
-        Status: status.charAt(0).toUpperCase() + status.slice(1)
-      };
-    
-      // Tambah data baru ke array lokal
-      // attendanceData.push(newRow);
-    
-      // Simpan juga ke file CSV lokal
-      // await saveCSVFile(attendanceData);
-    
-      // === Kirim ke API Vercel untuk simpan ke InfluxDB ===
-      try {
-        const response = await fetch("/api/save", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            tanggal,
-            nis,
-            nama,
-            kelas,
-            status
-          })
-        });
-    
-        const result = await response.json();
-        if (response.ok) {
-          console.log("✅ Tersimpan ke InfluxDB:", result);
-          const msg = document.getElementById("successMessage");
-          msg.classList.add("show");
-          setTimeout(() => msg.classList.remove("show"), 3000);
-        } else {
-          console.error("❌ Gagal simpan ke InfluxDB:", result.error);
-          alert("Gagal simpan ke InfluxDB: " + result.error);
-        }
-      } catch (err) {
-        console.error("❌ Error fetch:", err);
-        alert("Tidak bisa mengirim data ke server. Periksa koneksi internet atau backend API.");
-      }
+      // Tampilkan pesan sukses
+      const msg = document.getElementById("successMessage");
+      msg.classList.add("show");
+      setTimeout(() => msg.classList.remove("show"), 3000);
+      
+      // Reset form
+      document.getElementById("attendanceForm").reset();
     });
 
     // Jalankan inisialisasi
     document.addEventListener("DOMContentLoaded", initDropdowns);
   </script>
 </body>
-
 </html>
-
-
