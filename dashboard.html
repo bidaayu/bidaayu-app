@@ -8,225 +8,510 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="main-content">
-  <header>
-    <h1>📊 Dashboard Kehadiran Bulanan</h1>
-    <button class="theme-toggle" id="themeToggle">🌙 Dark Mode</button>
-  </header>
+  <div class="container">
+    <header>
+      <h1>📊 Dashboard Kehadiran Bulanan</h1>
+      <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+    </header>
 
-  <h2 id="dashboardTitle">Ringkasan Absensi</h2>
-  
-  <div class="filters">
-    <label for="monthSelect">Pilih Bulan:</label>
-    <select id="monthSelect">
-      <option value="">-- Semua Bulan --</option>
-      <option value="1">Januari</option>
-      <option value="2">Februari</option>
-      <option value="3">Maret</option>
-      <option value="4">April</option>
-      <option value="5">Mei</option>
-      <option value="6">Juni</option>
-      <option value="7">Juli</option>
-      <option value="8">Agustus</option>
-      <option value="9">September</option>
-      <option value="10">Oktober</option>
-      <option value="11">November</option>
-      <option value="12">Desember</option>
-    </select>
+    <div class="loading" id="loading">
+      ⏳ Memuat data dari CSV...
+      <span class="status-indicator status-loading" id="statusIndicator">Mohon tunggu</span>
+    </div>
+
+    <div class="error-message" id="errorMessage"></div>
+
+    <div class="filters">
+      <div class="filter-group">
+        <label for="monthSelect">📅 Pilih Bulan:</label>
+        <select id="monthSelect" onchange="updateDashboard()" disabled>
+          <option value="">-- Pilih Bulan --</option>
+          <option value="1">Januari</option>
+          <option value="2">Februari</option>
+          <option value="3">Maret</option>
+          <option value="4">April</option>
+          <option value="5">Mei</option>
+          <option value="6">Juni</option>
+          <option value="7">Juli</option>
+          <option value="8">Agustus</option>
+          <option value="9">September</option>
+          <option value="10">Oktober</option>
+          <option value="11">November</option>
+          <option value="12">Desember</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="yearSelect">📆 Pilih Tahun:</label>
+        <select id="yearSelect" onchange="updateDashboard()" disabled>
+          <option value="">-- Pilih Tahun --</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="classSelect">🎓 Pilih Kelas:</label>
+        <select id="classSelect" onchange="updateDashboard()" disabled>
+          <option value="">-- Memuat kelas... --</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="comparison-section" id="comparisonSection" style="display: none;">
+      <div class="month-card">
+        <h3 id="prevMonthTitle">Bulan Sebelumnya</h3>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="label">Hadir</div>
+            <div class="value" id="prevHadir">0</div>
+          </div>
+          <div class="stat-item">
+            <div class="label">Izin</div>
+            <div class="value" id="prevIzin">0</div>
+          </div>
+          <div class="stat-item">
+            <div class="label">Sakit</div>
+            <div class="value" id="prevSakit">0</div>
+          </div>
+          <div class="stat-item">
+            <div class="label">Alfa</div>
+            <div class="value" id="prevAlfa">0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="month-card">
+        <h3 id="currMonthTitle">Bulan Ini</h3>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="label">Hadir</div>
+            <div class="value" id="currHadir">0</div>
+          </div>
+          <div class="stat-item">
+            <div class="label">Izin</div>
+            <div class="value" id="currIzin">0</div>
+          </div>
+          <div class="stat-item">
+            <div class="label">Sakit</div>
+            <div class="value" id="currSakit">0</div>
+          </div>
+          <div class="stat-item">
+            <div class="label">Alfa</div>
+            <div class="value" id="currAlfa">0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chart-container">
+      <h2>📈 Grafik Kehadiran Harian</h2>
+      <canvas id="dailyChart"></canvas>
+    </div>
+
+    <div class="chart-container">
+      <h2>🥧 Persentase Kehadiran per Kelas</h2>
+      <div class="pie-wrapper">
+        <canvas id="pieChart"></canvas>
+      </div>
+    </div>
   </div>
 
-  <!-- Pilih Kelas -->
-  <section class="filter-section">
-    <label for="classSelect">🎓 Pilih Kelas:</label>
-    <select id="classSelect">
-      <option value="">-- Semua Kelas --</option>
-      <option value="X-A">X-A</option>
-      <option value="X-B">X-B</option>
-      <option value="XI-A">XI-A</option>
-      <option value="XI-B">XI-B</option>
-      <option value="XII-A">XII-A</option>
-      <option value="XII-B">XII-B</option>
-    </select>
-  </section>
-
-  <!-- Summary Cards -->
-  <section class="cards">
-    <div class="card hadir"><h3>Hadir</h3><p id="hadirCount">0</p></div>
-    <div class="card izin"><h3>Izin</h3><p id="izinCount">0</p></div>
-    <div class="card sakit"><h3>Sakit</h3><p id="sakitCount">0</p></div>
-    <div class="card alfa"><h3>Alfa</h3><p id="alfaCount">0</p></div>
-  </section>
-  
-  <!-- Chart -->
-  <section class="chart-container">
-    <h2>Grafik Kehadiran Bulanan per Kelas</h2>
-    <canvas id="attendanceChart"></canvas>
-  </section>
-
-  <section class="chart-container">
-    <h2>Persentase Kehadiran per Kelas</h2>
-    <div class="pie-wrapper">
-      <canvas id="classPieChart"></canvas>
-    </div>
-  </section>
-
   <script>
-    // Dark Mode Toggle
-    function toggleTheme() {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? '' : 'dark';
-      const themeToggle = document.getElementById('themeToggle');
-      
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      
-      if (newTheme === 'dark') {
-        themeToggle.textContent = '☀️ Light Mode';
-      } else {
-        themeToggle.textContent = '🌙 Dark Mode';
-      }
+    let studentsData = [];
+    let attendanceData = [];
+    let dailyChart = null;
+    let pieChart = null;
 
-      // Update chart theme
-      updateChartColors();
+    const monthNames = ['', 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 
+                        'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+
+    // === Fungsi membaca CSV ===
+    async function loadCSV(url) {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const text = await response.text();
+        const rows = text.trim().split("\n").map(r => r.split(","));
+        const headers = rows[0].map(h => h.trim());
+        return rows.slice(1).map(row => {
+          const obj = {};
+          headers.forEach((h, i) => {
+            const value = row[i]?.trim() || '';
+            obj[h] = value.replace(/(^"|"$)/g, '');
+          });
+          return obj;
+        });
+      } catch (error) {
+        console.error('Error loading CSV:', error);
+        throw error;
+      }
     }
 
-    // Load saved theme
-    document.addEventListener('DOMContentLoaded', function() {
-      const savedTheme = localStorage.getItem('theme');
-      const themeToggle = document.getElementById('themeToggle');
+    // === Fungsi inisialisasi dropdown kelas ===
+    async function initDropdowns() {
+      try {
+        updateStatus('Memuat data siswa...', 'loading');
+        
+        // Load students data
+        studentsData = await loadCSV("students_all.csv");
+        console.log('✅ Data siswa dimuat:', studentsData.length, 'siswa');
+        
+        const classSelect = document.getElementById("classSelect");
+        
+        // Ambil daftar kelas unik
+        const classes = [...new Set(studentsData.map(s => s.kelas).filter(k => k))].sort();
+        
+        classSelect.innerHTML = '<option value="">-- Semua Kelas --</option>';
+        classes.forEach(kelas => {
+          const opt = document.createElement("option");
+          opt.value = kelas;
+          opt.textContent = kelas;
+          classSelect.appendChild(opt);
+        });
+        
+        // Simpan data siswa global untuk akses cepat
+        window.studentsData = studentsData;
+        
+        updateStatus('Data siswa berhasil dimuat', 'ready');
+        
+        // Load attendance data
+        await loadAttendanceData();
+        
+      } catch (error) {
+        console.error('❌ Error inisialisasi dropdown:', error);
+        showError('Gagal memuat data siswa dari students_all.csv. Pastikan file tersedia.');
+        updateStatus('Gagal memuat data', 'error');
+      }
+    }
+
+    // === Fungsi load data absensi ===
+    async function loadAttendanceData() {
+      try {
+        updateStatus('Memuat data absensi...', 'loading');
+        
+        // Coba load dari attendance.csv atau nama file lain
+        attendanceData = await loadCSV("attendance_all.csv");
+        console.log('✅ Data absensi dimuat:', attendanceData.length, 'record');
+        
+        populateYearSelect();
+        enableFilters();
+        
+        updateStatus('Siap!', 'ready');
+        document.getElementById('loading').style.display = 'none';
+        
+        // Auto select current month and year
+        const currentDate = new Date();
+        document.getElementById('monthSelect').value = currentDate.getMonth() + 1;
+        
+        updateDashboard();
+        
+      } catch (error) {
+        console.error('❌ Error loading attendance data:', error);
+        showError('Gagal memuat data absensi dari attendance.csv. Pastikan file tersedia.');
+        updateStatus('Gagal memuat absensi', 'error');
+      }
+    }
+
+    function updateStatus(message, type) {
+      const indicator = document.getElementById('statusIndicator');
+      indicator.textContent = message;
+      indicator.className = 'status-indicator status-' + type;
+    }
+
+    function enableFilters() {
+      document.getElementById('classSelect').disabled = false;
+      document.getElementById('monthSelect').disabled = false;
+      document.getElementById('yearSelect').disabled = false;
+    }
+
+    function populateYearSelect() {
+      const yearSelect = document.getElementById('yearSelect');
+      const years = [...new Set(attendanceData.map(a => {
+        if (a.tanggal || a.Tanggal) {
+          const dateStr = a.tanggal || a.Tanggal;
+          const date = new Date(dateStr);
+          return date.getFullYear();
+        }
+        return null;
+      }).filter(y => y && !isNaN(y)))].sort((a, b) => b - a);
+
+      yearSelect.innerHTML = '<option value="">-- Pilih Tahun --</option>';
+      years.forEach(year => {
+        const option = document.createElement('option');
+        option.value = year;
+        option.textContent = year;
+        yearSelect.appendChild(option);
+      });
+
+      if (years.length > 0) {
+        yearSelect.value = years[0];
+      }
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+      const btn = document.querySelector('.theme-toggle');
+      btn.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
+      updateCharts();
+    }
+
+    function showError(message) {
+      const errorDiv = document.getElementById('errorMessage');
+      errorDiv.textContent = message;
+      errorDiv.style.display = 'block';
+      setTimeout(() => {
+        errorDiv.style.display = 'none';
+      }, 5000);
+    }
+
+    function getStudentClass(nis) {
+      const student = studentsData.find(s => s.nis == nis || s.NIS == nis);
+      return student ? student.kelas : null;
+    }
+
+    function getPreviousMonth(month, year) {
+      if (month == 1) {
+        return { month: 12, year: year - 1 };
+      }
+      return { month: month - 1, year: year };
+    }
+
+    function filterAttendanceByMonth(month, year, selectedClass) {
+      return attendanceData.filter(record => {
+        const dateStr = record.tanggal || record.Tanggal;
+        const nisValue = record.nis || record.NIS;
+        
+        if (!dateStr || !nisValue) return false;
+        
+        const date = new Date(dateStr);
+        const recordMonth = date.getMonth() + 1;
+        const recordYear = date.getFullYear();
+        
+        if (recordMonth != month || recordYear != year) return false;
+        
+        if (selectedClass) {
+          const studentClass = getStudentClass(nisValue);
+          return studentClass === selectedClass;
+        }
+        
+        return true;
+      });
+    }
+
+    function calculateStats(records) {
+      const stats = {
+        hadir: 0,
+        izin: 0,
+        sakit: 0,
+        alfa: 0
+      };
+
+      records.forEach(record => {
+        const status = (record.status || record.Status || '').toLowerCase().trim();
+        if (status === 'hadir') stats.hadir++;
+        else if (status === 'izin') stats.izin++;
+        else if (status === 'sakit') stats.sakit++;
+        else if (status === 'alfa') stats.alfa++;
+      });
+
+      return stats;
+    }
+
+    function getDailyStats(records) {
+      const dailyData = {};
       
-      if (savedTheme === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        themeToggle.textContent = '☀️ Light Mode';
+      records.forEach(record => {
+        const dateStr = record.tanggal || record.Tanggal;
+        if (!dateStr) return;
+        
+        const date = new Date(dateStr);
+        const day = date.getDate();
+        
+        if (!dailyData[day]) {
+          dailyData[day] = { hadir: 0, izin: 0, sakit: 0, alfa: 0 };
+        }
+        
+        const status = (record.status || record.Status || '').toLowerCase().trim();
+        if (status === 'hadir') dailyData[day].hadir++;
+        else if (status === 'izin') dailyData[day].izin++;
+        else if (status === 'sakit') dailyData[day].sakit++;
+        else if (status === 'alfa') dailyData[day].alfa++;
+      });
+
+      return dailyData;
+    }
+
+    function updateDashboard() {
+      const selectedMonth = parseInt(document.getElementById('monthSelect').value);
+      const selectedYear = parseInt(document.getElementById('yearSelect').value);
+      const selectedClass = document.getElementById('classSelect').value;
+
+      if (!selectedMonth || !selectedYear) {
+        document.getElementById('comparisonSection').style.display = 'none';
+        return;
       }
 
-      // Event listener untuk theme toggle
-      themeToggle.addEventListener('click', toggleTheme);
+      const prev = getPreviousMonth(selectedMonth, selectedYear);
+      
+      const currRecords = filterAttendanceByMonth(selectedMonth, selectedYear, selectedClass);
+      const prevRecords = filterAttendanceByMonth(prev.month, prev.year, selectedClass);
 
-      // Initialize charts
-      initCharts();
+      const currStats = calculateStats(currRecords);
+      const prevStats = calculateStats(prevRecords);
 
-      // Update card values (dummy data)
-      updateCardValues();
-    });
+      document.getElementById('prevMonthTitle').textContent = `${monthNames[prev.month]} ${prev.year}`;
+      document.getElementById('currMonthTitle').textContent = `${monthNames[selectedMonth]} ${selectedYear}`;
 
-    // Charts
-    let barChart, pieChart;
+      document.getElementById('prevHadir').textContent = prevStats.hadir;
+      document.getElementById('prevIzin').textContent = prevStats.izin;
+      document.getElementById('prevSakit').textContent = prevStats.sakit;
+      document.getElementById('prevAlfa').textContent = prevStats.alfa;
 
-    function initCharts() {
-      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      const textColor = isDark ? '#e8f5e9' : '#2d4a2f';
+      document.getElementById('currHadir').textContent = currStats.hadir;
+      document.getElementById('currIzin').textContent = currStats.izin;
+      document.getElementById('currSakit').textContent = currStats.sakit;
+      document.getElementById('currAlfa').textContent = currStats.alfa;
+
+      document.getElementById('comparisonSection').style.display = 'grid';
+
+      updateDailyChart(currRecords, selectedMonth, selectedYear);
+      updatePieChart(currStats);
+    }
+
+    function updateDailyChart(records, month, year) {
+      const dailyStats = getDailyStats(records);
+      const daysInMonth = new Date(year, month, 0).getDate();
+      
+      const labels = [];
+      const hadirData = [];
+      const izinData = [];
+      const sakitData = [];
+      const alfaData = [];
+
+      for (let day = 1; day <= daysInMonth; day++) {
+        labels.push(day);
+        const stats = dailyStats[day] || { hadir: 0, izin: 0, sakit: 0, alfa: 0 };
+        hadirData.push(stats.hadir);
+        izinData.push(stats.izin);
+        sakitData.push(stats.sakit);
+        alfaData.push(stats.alfa);
+      }
+
+      const ctx = document.getElementById('dailyChart').getContext('2d');
+      
+      if (dailyChart) {
+        dailyChart.destroy();
+      }
+
+      const isDark = document.body.classList.contains('dark-mode');
+      const textColor = isDark ? '#e0e0e0' : '#333';
       const gridColor = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)';
 
-      // Bar Chart
-      const ctx = document.getElementById('attendanceChart');
-      barChart = new Chart(ctx, {
+      dailyChart = new Chart(ctx, {
         type: 'bar',
         data: {
-          labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni'],
-          datasets: [{
-            label: 'Hadir',
-            data: [85, 90, 88, 92, 87, 91],
-            backgroundColor: 'rgba(126, 201, 130, 0.8)',
-            borderColor: 'rgba(126, 201, 130, 1)',
-            borderWidth: 2
-          }, {
-            label: 'Izin',
-            data: [8, 5, 7, 4, 6, 5],
-            backgroundColor: 'rgba(240, 147, 251, 0.8)',
-            borderColor: 'rgba(240, 147, 251, 1)',
-            borderWidth: 2
-          }, {
-            label: 'Sakit',
-            data: [5, 4, 3, 3, 5, 3],
-            backgroundColor: 'rgba(79, 172, 254, 0.8)',
-            borderColor: 'rgba(79, 172, 254, 1)',
-            borderWidth: 2
-          }, {
-            label: 'Alfa',
-            data: [2, 1, 2, 1, 2, 1],
-            backgroundColor: 'rgba(250, 112, 154, 0.8)',
-            borderColor: 'rgba(250, 112, 154, 1)',
-            borderWidth: 2
-          }]
+          labels: labels,
+          datasets: [
+            {
+              label: 'Hadir',
+              data: hadirData,
+              backgroundColor: 'rgba(46, 204, 113, 0.8)',
+              borderColor: 'rgba(46, 204, 113, 1)',
+              borderWidth: 1
+            },
+            {
+              label: 'Izin',
+              data: izinData,
+              backgroundColor: 'rgba(52, 152, 219, 0.8)',
+              borderColor: 'rgba(52, 152, 219, 1)',
+              borderWidth: 1
+            },
+            {
+              label: 'Sakit',
+              data: sakitData,
+              backgroundColor: 'rgba(241, 196, 15, 0.8)',
+              borderColor: 'rgba(241, 196, 15, 1)',
+              borderWidth: 1
+            },
+            {
+              label: 'Alfa',
+              data: alfaData,
+              backgroundColor: 'rgba(231, 76, 60, 0.8)',
+              borderColor: 'rgba(231, 76, 60, 1)',
+              borderWidth: 1
+            }
+          ]
         },
         options: {
           responsive: true,
           maintainAspectRatio: true,
           plugins: {
             legend: {
-              position: 'top',
               labels: {
-                color: textColor,
-                font: {
-                  family: 'Inter',
-                  size: 12,
-                  weight: '600'
-                },
-                padding: 15
+                color: textColor
               }
-            },
-            tooltip: {
-              backgroundColor: 'rgba(0, 0, 0, 0.8)',
-              padding: 12,
-              titleFont: {
-                size: 14,
-                weight: 'bold'
-              },
-              bodyFont: {
-                size: 13
-              },
-              cornerRadius: 8
             }
           },
           scales: {
+            x: {
+              stacked: false,
+              ticks: {
+                color: textColor
+              },
+              grid: {
+                color: gridColor
+              }
+            },
             y: {
+              stacked: false,
               beginAtZero: true,
               ticks: {
                 color: textColor,
-                font: {
-                  size: 11
-                }
+                stepSize: 1
               },
               grid: {
-                color: gridColor,
-                drawBorder: false
-              }
-            },
-            x: {
-              ticks: {
-                color: textColor,
-                font: {
-                  size: 11
-                }
-              },
-              grid: {
-                color: gridColor,
-                drawBorder: false
+                color: gridColor
               }
             }
           }
         }
       });
+    }
 
-      // Pie Chart
-      const pieCtx = document.getElementById('classPieChart');
-      pieChart = new Chart(pieCtx, {
+    function updatePieChart(stats) {
+      const ctx = document.getElementById('pieChart').getContext('2d');
+      
+      if (pieChart) {
+        pieChart.destroy();
+      }
+
+      const total = stats.hadir + stats.izin + stats.sakit + stats.alfa;
+      
+      if (total === 0) {
+        return;
+      }
+
+      const isDark = document.body.classList.contains('dark-mode');
+      const textColor = isDark ? '#e0e0e0' : '#333';
+
+      pieChart = new Chart(ctx, {
         type: 'pie',
         data: {
-          labels: ['Kelas X-A', 'Kelas X-B', 'Kelas XI-A', 'Kelas XI-B'],
+          labels: ['Hadir', 'Izin', 'Sakit', 'Alfa'],
           datasets: [{
-            data: [92, 88, 90, 85],
+            data: [stats.hadir, stats.izin, stats.sakit, stats.alfa],
             backgroundColor: [
-              'rgba(126, 201, 130, 0.8)',
-              'rgba(79, 172, 254, 0.8)',
-              'rgba(240, 147, 251, 0.8)',
-              'rgba(250, 112, 154, 0.8)'
+              'rgba(46, 204, 113, 0.8)',
+              'rgba(52, 152, 219, 0.8)',
+              'rgba(241, 196, 15, 0.8)',
+              'rgba(231, 76, 60, 0.8)'
             ],
             borderColor: [
-              'rgba(126, 201, 130, 1)',
-              'rgba(79, 172, 254, 1)',
-              'rgba(240, 147, 251, 1)',
-              'rgba(250, 112, 154, 1)'
+              'rgba(46, 204, 113, 1)',
+              'rgba(52, 152, 219, 1)',
+              'rgba(241, 196, 15, 1)',
+              'rgba(231, 76, 60, 1)'
             ],
             borderWidth: 2
           }]
@@ -236,38 +521,17 @@
           maintainAspectRatio: true,
           plugins: {
             legend: {
-              position: 'bottom',
               labels: {
-                color: textColor,
-                font: {
-                  family: 'Inter',
-                  size: 12,
-                  weight: '600'
-                },
-                padding: 15,
-                boxWidth: 15,
-                boxHeight: 15
+                color: textColor
               }
             },
             tooltip: {
-              backgroundColor: 'rgba(0, 0, 0, 0.8)',
-              padding: 12,
-              titleFont: {
-                size: 14,
-                weight: 'bold'
-              },
-              bodyFont: {
-                size: 13
-              },
-              cornerRadius: 8,
               callbacks: {
                 label: function(context) {
-                  let label = context.label || '';
-                  if (label) {
-                    label += ': ';
-                  }
-                  label += context.parsed + '%';
-                  return label;
+                  const label = context.label || '';
+                  const value = context.parsed || 0;
+                  const percentage = ((value / total) * 100).toFixed(1);
+                  return `${label}: ${value} (${percentage}%)`;
                 }
               }
             }
@@ -276,46 +540,12 @@
       });
     }
 
-    function updateChartColors() {
-      if (!barChart || !pieChart) return;
-
-      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      const textColor = isDark ? '#e8f5e9' : '#2d4a2f';
-      const gridColor = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)';
-
-      // Update bar chart
-      barChart.options.plugins.legend.labels.color = textColor;
-      barChart.options.scales.y.ticks.color = textColor;
-      barChart.options.scales.x.ticks.color = textColor;
-      barChart.options.scales.y.grid.color = gridColor;
-      barChart.options.scales.x.grid.color = gridColor;
-      barChart.update();
-
-      // Update pie chart
-      pieChart.options.plugins.legend.labels.color = textColor;
-      pieChart.update();
+    function updateCharts() {
+      updateDashboard();
     }
 
-    function updateCardValues() {
-      // Dummy data - ganti dengan data asli dari API/CSV
-      document.getElementById('hadirCount').textContent = '458';
-      document.getElementById('izinCount').textContent = '35';
-      document.getElementById('sakitCount').textContent = '23';
-      document.getElementById('alfaCount').textContent = '9';
-    }
-
-    // Filter handlers
-    document.getElementById('monthSelect').addEventListener('change', function() {
-      const selectedMonth = this.value;
-      console.log('Filter bulan:', selectedMonth || 'Semua');
-      // Tambahkan logic filter data berdasarkan bulan
-    });
-
-    document.getElementById('classSelect').addEventListener('change', function() {
-      const selectedClass = this.value;
-      console.log('Filter kelas:', selectedClass || 'Semua');
-      // Tambahkan logic filter data berdasarkan kelas
-    });
+    // Jalankan inisialisasi saat halaman dimuat
+    document.addEventListener("DOMContentLoaded", initDropdowns);
   </script>
 </body>
 </html>
