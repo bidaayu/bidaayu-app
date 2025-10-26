@@ -11,10 +11,10 @@ export default async function handler(req, res) {
   }
 
   try {
-    const url = process.env.INFLUX_URL;       // contoh: https://us-east-1-1.aws.cloud2.influxdata.com
-    const token = process.env.INFLUX_TOKEN;   // token dari InfluxDB Cloud
-    const org = process.env.INFLUX_ORG;       // nama organisasi kamu
-    const bucket = process.env.INFLUX_BUCKET; // nama bucket data absensi
+    const url = process.env.INFLUX_URL;
+    const token = process.env.INFLUX_TOKEN;
+    const org = process.env.INFLUX_ORG;
+    const bucket = process.env.INFLUX_BUCKET;
 
     const influxDB = new InfluxDB({ url, token });
     const writeApi = influxDB.getWriteApi(org, bucket, "ns");
@@ -30,7 +30,7 @@ export default async function handler(req, res) {
     writeApi.writePoint(point);
     await writeApi.close();
 
-    return res.status(200).json({ message: "Data tersimpan ke InfluxDB Cloud" });
+    return res.status(200).json({ message: "✅ Data tersimpan ke InfluxDB Cloud" });
   } catch (err) {
     console.error("❌ Gagal menulis ke InfluxDB:", err);
     return res.status(500).json({ error: "Server error" });
