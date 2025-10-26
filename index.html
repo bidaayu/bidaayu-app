@@ -1,19 +1,55 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sistem Absensi Siswa</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-  <div class="layout">
+<div class="layout">
+    <!-- Tombol Hamburger untuk Mobile -->
+    <button class="hamburger-btn" id="hamburgerBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
     <!-- Sidebar -->
-    <iframe src="sidebar.html" class="sidebar-frame"></iframe>
+    <iframe src="sidebar.html" class="sidebar-frame" id="sidebarFrame"></iframe>
 
     <!-- Main Content -->
     <iframe src="dashboard.html" class="content-frame" name="mainContent"></iframe>
   </div>
-</body>
-</html>
+
+  <script>
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const sidebarFrame = document.getElementById('sidebarFrame');
+    const layout = document.querySelector('.layout');
+
+    hamburgerBtn.addEventListener('click', function() {
+      this.classList.toggle('active');
+      sidebarFrame.classList.toggle('active');
+      layout.classList.toggle('sidebar-open');
+    });
+
+    // Tutup sidebar ketika overlay diklik
+    layout.addEventListener('click', function(e) {
+      if (e.target === this && this.classList.contains('sidebar-open')) {
+        hamburgerBtn.classList.remove('active');
+        sidebarFrame.classList.remove('active');
+        this.classList.remove('sidebar-open');
+      }
+    });
+
+    // Tutup sidebar ketika link di sidebar diklik (untuk mobile)
+    sidebarFrame.addEventListener('load', function() {
+      try {
+        const sidebarDoc = sidebarFrame.contentDocument || sidebarFrame.contentWindow.document;
+        const links = sidebarDoc.querySelectorAll('a');
+        
+        links.forEach(link => {
+          link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+              hamburgerBtn.classList.remove('active');
+              sidebarFrame.classList.remove('active');
+              layout.classList.remove('sidebar-open');
+            }
+          });
+        });
+      } catch(e) {
+        console.log('Cannot access iframe content');
+      }
+    });
+  </script>
