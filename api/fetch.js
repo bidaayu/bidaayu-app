@@ -23,10 +23,9 @@ export default async function handler(req, res) {
     
     const fluxQuery = `
     from(bucket: "absensi")
-      |> range(start: ${startDate.toISOString()}, stop: ${stopDate.toISOString()})
-      |> filter(fn: (r) => r._measurement == "absensi")
-      |> group(columns: ["kelas", "status", "nama", "nis"])
-      |> keep(columns: ["_time", "_value", "kelas", "status", "nama", "nis"])
+    |> range(start: 2025-10-01T00:00:00Z, stop: 2025-11-01T00:00:00Z)
+    |> filter(fn: (r) => r._measurement == "absensi")
+    |> keep(columns: ["_time", "_value", "kelas", "status", "nama", "nis"]) 
     `;
 
     console.log("🔍 Query:", fluxQuery);
@@ -50,5 +49,6 @@ export default async function handler(req, res) {
   }
 
 }
+
 
 
