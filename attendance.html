@@ -788,6 +788,7 @@
         });
     
         const result = await response.json();
+        console.log("response: ", result);
         if (response.ok) {
           console.log("✅ Tersimpan ke InfluxDB:", result);
           const msg = document.getElementById("successMessage");
@@ -809,5 +810,6 @@
   </script>
 </body>
 </html>
+
 
 
