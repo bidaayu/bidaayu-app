@@ -616,6 +616,23 @@ tr:hover td {
     height: 300px;
   }
 
+  canvas {
+    max-height: 300px;
+  }
+
+  .pie-wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  #dailyChart {
+    max-height: 280px;
+  }
+
+  #pieChart {
+    max-height: 320px;
+  }
+
   /* Table responsive */
   .table-section {
     overflow-x: auto;
@@ -780,3 +797,4 @@ body.dark-mode .loading {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #764ba2, #667eea);
 }
+
