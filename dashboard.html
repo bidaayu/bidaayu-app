@@ -10,7 +10,7 @@
 <body class="main-content">
   <header>
     <h1>📊 Dashboard Kehadiran Bulanan</h1>
-    <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+    <button class="theme-toggle" id="themeToggle">🌙 Dark Mode</button>
   </header>
 
   <h2 id="dashboardTitle">Ringkasan Absensi</h2>
@@ -37,8 +37,14 @@
   <!-- Pilih Kelas -->
   <section class="filter-section">
     <label for="classSelect">🎓 Pilih Kelas:</label>
-    <select id="classSelect" disabled>
-      <option value="">-- Upload file dulu --</option>
+    <select id="classSelect">
+      <option value="">-- Semua Kelas --</option>
+      <option value="X-A">X-A</option>
+      <option value="X-B">X-B</option>
+      <option value="XI-A">XI-A</option>
+      <option value="XI-B">XI-B</option>
+      <option value="XII-A">XII-A</option>
+      <option value="XII-B">XII-B</option>
     </select>
   </section>
 
@@ -63,6 +69,253 @@
     </div>
   </section>
 
-  <script src="script.js"></script>
+  <script>
+    // Dark Mode Toggle
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? '' : 'dark';
+      const themeToggle = document.getElementById('themeToggle');
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      
+      if (newTheme === 'dark') {
+        themeToggle.textContent = '☀️ Light Mode';
+      } else {
+        themeToggle.textContent = '🌙 Dark Mode';
+      }
+
+      // Update chart theme
+      updateChartColors();
+    }
+
+    // Load saved theme
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedTheme = localStorage.getItem('theme');
+      const themeToggle = document.getElementById('themeToggle');
+      
+      if (savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        themeToggle.textContent = '☀️ Light Mode';
+      }
+
+      // Event listener untuk theme toggle
+      themeToggle.addEventListener('click', toggleTheme);
+
+      // Initialize charts
+      initCharts();
+
+      // Update card values (dummy data)
+      updateCardValues();
+    });
+
+    // Charts
+    let barChart, pieChart;
+
+    function initCharts() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const textColor = isDark ? '#e8f5e9' : '#2d4a2f';
+      const gridColor = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)';
+
+      // Bar Chart
+      const ctx = document.getElementById('attendanceChart');
+      barChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni'],
+          datasets: [{
+            label: 'Hadir',
+            data: [85, 90, 88, 92, 87, 91],
+            backgroundColor: 'rgba(126, 201, 130, 0.8)',
+            borderColor: 'rgba(126, 201, 130, 1)',
+            borderWidth: 2
+          }, {
+            label: 'Izin',
+            data: [8, 5, 7, 4, 6, 5],
+            backgroundColor: 'rgba(240, 147, 251, 0.8)',
+            borderColor: 'rgba(240, 147, 251, 1)',
+            borderWidth: 2
+          }, {
+            label: 'Sakit',
+            data: [5, 4, 3, 3, 5, 3],
+            backgroundColor: 'rgba(79, 172, 254, 0.8)',
+            borderColor: 'rgba(79, 172, 254, 1)',
+            borderWidth: 2
+          }, {
+            label: 'Alfa',
+            data: [2, 1, 2, 1, 2, 1],
+            backgroundColor: 'rgba(250, 112, 154, 0.8)',
+            borderColor: 'rgba(250, 112, 154, 1)',
+            borderWidth: 2
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          plugins: {
+            legend: {
+              position: 'top',
+              labels: {
+                color: textColor,
+                font: {
+                  family: 'Inter',
+                  size: 12,
+                  weight: '600'
+                },
+                padding: 15
+              }
+            },
+            tooltip: {
+              backgroundColor: 'rgba(0, 0, 0, 0.8)',
+              padding: 12,
+              titleFont: {
+                size: 14,
+                weight: 'bold'
+              },
+              bodyFont: {
+                size: 13
+              },
+              cornerRadius: 8
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: {
+                color: textColor,
+                font: {
+                  size: 11
+                }
+              },
+              grid: {
+                color: gridColor,
+                drawBorder: false
+              }
+            },
+            x: {
+              ticks: {
+                color: textColor,
+                font: {
+                  size: 11
+                }
+              },
+              grid: {
+                color: gridColor,
+                drawBorder: false
+              }
+            }
+          }
+        }
+      });
+
+      // Pie Chart
+      const pieCtx = document.getElementById('classPieChart');
+      pieChart = new Chart(pieCtx, {
+        type: 'pie',
+        data: {
+          labels: ['Kelas X-A', 'Kelas X-B', 'Kelas XI-A', 'Kelas XI-B'],
+          datasets: [{
+            data: [92, 88, 90, 85],
+            backgroundColor: [
+              'rgba(126, 201, 130, 0.8)',
+              'rgba(79, 172, 254, 0.8)',
+              'rgba(240, 147, 251, 0.8)',
+              'rgba(250, 112, 154, 0.8)'
+            ],
+            borderColor: [
+              'rgba(126, 201, 130, 1)',
+              'rgba(79, 172, 254, 1)',
+              'rgba(240, 147, 251, 1)',
+              'rgba(250, 112, 154, 1)'
+            ],
+            borderWidth: 2
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: {
+                color: textColor,
+                font: {
+                  family: 'Inter',
+                  size: 12,
+                  weight: '600'
+                },
+                padding: 15,
+                boxWidth: 15,
+                boxHeight: 15
+              }
+            },
+            tooltip: {
+              backgroundColor: 'rgba(0, 0, 0, 0.8)',
+              padding: 12,
+              titleFont: {
+                size: 14,
+                weight: 'bold'
+              },
+              bodyFont: {
+                size: 13
+              },
+              cornerRadius: 8,
+              callbacks: {
+                label: function(context) {
+                  let label = context.label || '';
+                  if (label) {
+                    label += ': ';
+                  }
+                  label += context.parsed + '%';
+                  return label;
+                }
+              }
+            }
+          }
+        }
+      });
+    }
+
+    function updateChartColors() {
+      if (!barChart || !pieChart) return;
+
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const textColor = isDark ? '#e8f5e9' : '#2d4a2f';
+      const gridColor = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)';
+
+      // Update bar chart
+      barChart.options.plugins.legend.labels.color = textColor;
+      barChart.options.scales.y.ticks.color = textColor;
+      barChart.options.scales.x.ticks.color = textColor;
+      barChart.options.scales.y.grid.color = gridColor;
+      barChart.options.scales.x.grid.color = gridColor;
+      barChart.update();
+
+      // Update pie chart
+      pieChart.options.plugins.legend.labels.color = textColor;
+      pieChart.update();
+    }
+
+    function updateCardValues() {
+      // Dummy data - ganti dengan data asli dari API/CSV
+      document.getElementById('hadirCount').textContent = '458';
+      document.getElementById('izinCount').textContent = '35';
+      document.getElementById('sakitCount').textContent = '23';
+      document.getElementById('alfaCount').textContent = '9';
+    }
+
+    // Filter handlers
+    document.getElementById('monthSelect').addEventListener('change', function() {
+      const selectedMonth = this.value;
+      console.log('Filter bulan:', selectedMonth || 'Semua');
+      // Tambahkan logic filter data berdasarkan bulan
+    });
+
+    document.getElementById('classSelect').addEventListener('change', function() {
+      const selectedClass = this.value;
+      console.log('Filter kelas:', selectedClass || 'Semua');
+      // Tambahkan logic filter data berdasarkan kelas
+    });
+  </script>
 </body>
 </html>
