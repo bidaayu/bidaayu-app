@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Input Absensi Siswa</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary-gradient: linear-gradient(135deg, #7ec982 0%, #5fb663 100%);
+      --secondary-gradient: linear-gradient(135deg, #a8e6a1 0%, #7ec982 100%);
+      --success-gradient: linear-gradient(135deg, #90d995 0%, #6bc771 100%);
+      --warning-gradient: linear-gradient(135deg, #f9d892 0%, #f5c563 100%);
+      --info-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      --danger-gradient: linear-gradient(135deg, #ff9999 0%, #ff7b7b 100%);
+      
+      --bg-primary: #FDFBF6;
+      --bg-secondary: #ffffff;
+      --text-primary: #2d4a2f;
+      --text-secondary: #6b8e6f;
+      --border-color: rgba(126, 201, 130, 0.15);
+      --glass-bg: rgba(255, 255, 255, 0.85);
+      --glass-border: rgba(126, 201, 130, 0.25);
+      --shadow-glow: 0 8px 32px rgba(126, 201, 130, 0.12);
+      --shadow-intense: 0 15px 45px rgba(126, 201, 130, 0.18);
+    }
+
+    [data-theme="dark"] {
+      --bg-primary: #1a2e1c;
+      --bg-secondary: #243426;
+      --text-primary: #e8f5e9;
+      --text-secondary: #a5d6a7;
+      --border-color: rgba(126, 201, 130, 0.2);
+      --glass-bg: rgba(255, 255, 255, 0.08);
+      --glass-border: rgba(126, 201, 130, 0.3);
+      --shadow-glow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      --shadow-intense: 0 15px 45px rgba(0, 0, 0, 0.4);
+    }
+
+    body, html {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-primary);
+      min-height: 100vh;
+      color: var(--text-primary);
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(126, 201, 130, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(95, 182, 99, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(168, 230, 161, 0.06) 0%, transparent 50%);
+      pointer-events: none;
+      animation: backgroundShift 20s ease infinite;
+    }
+
+    @keyframes backgroundShift {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.1); }
+    }
+
+    .main-content {
+      padding: 32px;
+      min-height: 100vh;
+      position: relative;
+      z-index: 1;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      padding: 24px 32px;
+      background: var(--glass-bg);
+      border-radius: 24px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--shadow-glow);
+      position: relative;
+      overflow: hidden;
+      animation: slideDown 0.6s ease;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--primary-gradient);
+      box-shadow: 0 0 20px rgba(102, 126, 234, 0.6);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #7ec982 0%, #5fb663 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .theme-toggle {
+      background: var(--glass-bg);
+      border: 2px solid var(--glass-border);
+      color: var(--text-primary);
+      padding: 12px 24px;
+      border-radius: 16px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-size: 0.95rem;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .theme-toggle::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+
+    .theme-toggle:hover::before {
+      width: 300px;
+      height: 300px;
+    }
+
+    .theme-toggle:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow);
+      border-color: rgba(126, 201, 130, 0.5);
+    }
+
+    .form-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--glass-bg);
+      border-radius: 32px;
+      padding: 48px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--shadow-intense);
+      animation: fadeInUp 0.8s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .form-container::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(126, 201, 130, 0.06) 0%, transparent 70%);
+      animation: rotate 20s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .form-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, #7ec982 0%, #5fb663 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      position: relative;
+      z-index: 1;
+    }
+
+    .form-subtitle {
+      color: var(--text-secondary);
+      margin-bottom: 36px;
+      font-size: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .form-group {
+      margin-bottom: 32px;
+      animation: fadeInUp 0.8s ease backwards;
+      position: relative;
+      z-index: 1;
+    }
+
+    .form-group:nth-child(1) { animation-delay: 0.1s; }
+    .form-group:nth-child(2) { animation-delay: 0.2s; }
+    .form-group:nth-child(3) { animation-delay: 0.3s; }
+    .form-group:nth-child(4) { animation-delay: 0.4s; }
+
+    .form-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .form-label .icon {
+      font-size: 1.2rem;
+    }
+
+    .form-input,
+    .form-select {
+      width: 100%;
+      padding: 16px 20px;
+      border: 2px solid var(--border-color);
+      border-radius: 16px;
+      background: var(--glass-bg);
+      color: var(--text-primary);
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      outline: none;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .form-input:focus,
+    .form-select:focus {
+      border-color: #7ec982;
+      box-shadow: 0 0 0 4px rgba(126, 201, 130, 0.15), 0 8px 24px rgba(126, 201, 130, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .form-input:hover,
+    .form-select:hover {
+      border-color: rgba(126, 201, 130, 0.5);
+    }
+
+    .form-select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%237ec982' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 20px center;
+      padding-right: 50px;
+    }
+
+    .status-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 16px;
+    }
+
+    .status-option {
+      position: relative;
+    }
+
+    .status-option input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .status-label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      border-radius: 20px;
+      border: 2px solid var(--border-color);
+      background: var(--glass-bg);
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .status-label::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--gradient);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 0;
+    }
+
+    .status-label .icon,
+    .status-label .text {
+      position: relative;
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+
+    .status-option input[type="radio"]:checked + .status-label {
+      border-color: transparent;
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: var(--shadow-intense);
+    }
+
+    .status-option input[type="radio"]:checked + .status-label::before {
+      opacity: 1;
+    }
+
+    .status-option input[type="radio"]:checked + .status-label .icon,
+    .status-option input[type="radio"]:checked + .status-label .text {
+      color: white;
+    }
+
+    .status-label:hover {
+      transform: translateY(-4px);
+      border-color: rgba(126, 201, 130, 0.5);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .status-label .icon {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .status-label .text {
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .status-hadir { --gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); }
+    .status-sakit { --gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+    .status-izin { --gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+    .status-alfa { --gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+
+    .button-group {
+      display: flex;
+      gap: 16px;
+      margin-top: 40px;
+      animation: fadeInUp 0.8s ease backwards;
+      animation-delay: 0.5s;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 18px 32px;
+      border: none;
+      border-radius: 16px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+
+    .btn:hover::before {
+      width: 400px;
+      height: 400px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #7ec982 0%, #5fb663 100%);
+      color: white;
+      box-shadow: 0 8px 24px rgba(126, 201, 130, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(126, 201, 130, 0.5);
+    }
+
+    .btn-primary:active {
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: var(--glass-bg);
+      color: var(--text-primary);
+      border: 2px solid var(--glass-border);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-glow);
+      border-color: rgba(126, 201, 130, 0.5);
+    }
+
+    .success-message {
+      display: none;
+      padding: 20px 24px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #90d995 0%, #6bc771 100%);
+      color: white;
+      margin-top: 24px;
+      animation: slideDown 0.5s ease;
+      box-shadow: 0 8px 24px rgba(144, 217, 149, 0.4);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .success-message.show {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .success-message .icon {
+      font-size: 1.5rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .main-content {
+        padding: 20px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+
+      .form-container {
+        padding: 32px 24px;
+        border-radius: 24px;
+      }
+
+      .form-title {
+        font-size: 1.5rem;
+      }
+
+      .status-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .status-label {
+        padding: 20px 12px;
+      }
+
+      .button-group {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg-secondary);
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #7ec982, #5fb663);
+      border-radius: 10px;
+      border: 2px solid var(--bg-primary);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(180deg, #5fb663, #7ec982);
+    }
+  </style>
+</head>
+<body class="main-content">
+  <header>
+    <h1>
+      <span class="icon">📝</span>
+      Input Absensi Siswa
+    </h1>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+  </header>
+
+  <div class="form-container">
+    <h2 class="form-title">Form Pencatatan Kehadiran</h2>
+    <p class="form-subtitle">Silakan isi data absensi siswa dengan lengkap dan akurat</p>
+
+    <form id="attendanceForm">
+      <div class="form-group">
+        <label class="form-label">
+          <span class="icon">📋</span>
+          Daftar Kehadiran Tanggal <span id="selectedDateLabel"></span>
+        </label>
+        <div id="attendanceList" class="attendance-list">
+          <p>Belum ada data untuk tanggal ini.</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">
+          <span class="icon">📅</span>
+          Tanggal
+        </label>
+        <input 
+          type="date" 
+          id="dateInput" 
+          class="form-input" 
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">
+          <span class="icon">🏫</span>
+          Pilih Kelas
+        </label>
+        <select id="classSelect" class="form-select" required>
+          <option value="">-- Pilih Kelas --</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">
+          <span class="icon">👨‍🎓</span>
+          Nama Siswa
+        </label>
+        <select id="studentSelect" class="form-select" required>
+          <option value="">-- Pilih Siswa --</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">
+          <span class="icon">✅</span>
+          Status Kehadiran
+        </label>
+        <div class="status-grid">
+          <div class="status-option">
+            <input type="radio" id="hadir" name="status" value="hadir" required />
+            <label for="hadir" class="status-label status-hadir">
+              <span class="icon">✅</span>
+              <span class="text">Hadir</span>
+            </label>
+          </div>
+
+          <div class="status-option">
+            <input type="radio" id="sakit" name="status" value="sakit" />
+            <label for="sakit" class="status-label status-sakit">
+              <span class="icon">🤒</span>
+              <span class="text">Sakit</span>
+            </label>
+          </div>
+
+          <div class="status-option">
+            <input type="radio" id="izin" name="status" value="izin" />
+            <label for="izin" class="status-label status-izin">
+              <span class="icon">📋</span>
+              <span class="text">Izin</span>
+            </label>
+          </div>
+
+          <div class="status-option">
+            <input type="radio" id="alfa" name="status" value="alfa" />
+            <label for="alfa" class="status-label status-alfa">
+              <span class="icon">❌</span>
+              <span class="text">Alfa</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+    
+
+      <div class="button-group">
+        <button type="button" class="btn btn-secondary" onclick="resetForm()">
+          Reset
+        </button>
+        <button type="submit" class="btn btn-primary">
+          Simpan Data
+        </button>
+      </div>
+    </form>
+
+    
+
+    <div id="successMessage" class="success-message">
+      <span class="icon">🎉</span>
+      <span>Data absensi berhasil disimpan!</span>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const today = new Date().toISOString().split("T")[0];
+      document.getElementById("dateInput").value = today;
+    });
+    // === Fungsi membaca CSV ===
+    async function loadCSV(url) {
+      const response = await fetch(url);
+      const text = await response.text();
+      const rows = text.trim().split("\n").map(r => r.split(","));
+      const headers = rows[0].map(h => h.trim());
+      return rows.slice(1).map(row => {
+        const obj = {};
+        headers.forEach((h, i) => obj[h] = row[i]?.trim());
+        return obj;
+      });
+    }
+
+    // === Fungsi inisialisasi dropdown kelas dan siswa ===
+    async function initDropdowns() {
+      const students = await loadCSV("students_all.csv");
+      const classSelect = document.getElementById("classSelect");
+      const studentSelect = document.getElementById("studentSelect");
+
+      // Ambil daftar kelas unik
+      const classes = [...new Set(students.map(s => s.kelas))];
+      classes.forEach(kelas => {
+        const opt = document.createElement("option");
+        opt.value = kelas;
+        opt.textContent = kelas;
+        classSelect.appendChild(opt);
+      });
+
+      // Saat kelas berubah → tampilkan siswa kelas itu
+      classSelect.addEventListener("change", () => {
+        const selected = classSelect.value;
+        studentSelect.innerHTML = '<option value="">-- Pilih Siswa --</option>';
+        students.filter(s => s.kelas === selected).forEach(s => {
+          const opt = document.createElement("option");
+          opt.value = s.nis;
+          opt.textContent = s.nama;
+          studentSelect.appendChild(opt);
+        });
+      });
+
+      // Simpan data siswa global untuk akses cepat
+      window.studentsData = students;
+    }
+
+    // === Fungsi reset form ===
+    function resetForm() {
+      document.getElementById("attendanceForm").reset();
+    }
+
+    // === Variabel global ===
+    let attendanceFileHandle = null;
+    let attendanceData = [];
+
+    // === Saat halaman pertama kali dimuat ===
+    window.addEventListener("DOMContentLoaded", async () => {
+      const savedHandle = localStorage.getItem("attendanceFileHandle");
+      
+      if (savedHandle) {
+        try {
+          // Coba restore handle dari storage
+          attendanceFileHandle = await getRestoredHandle();
+          if (attendanceFileHandle) {
+            const file = await attendanceFileHandle.getFile();
+            const text = await file.text();
+            attendanceData = parseCSV(text);
+            console.log("📂 File CSV otomatis dimuat:", attendanceFileHandle.name);
+            return;
+          }
+        } catch (err) {
+          console.warn("Gagal memulihkan handle file:", err);
+        }
+      }
+
+      // Jika belum ada file tersimpan → minta user pilih file CSV
+      await selectCSVFile();
+    });
+
+    // === Fungsi pilih file CSV pertama kali ===
+    async function selectCSVFile() {
+      try {
+        [attendanceFileHandle] = await window.showOpenFilePicker({
+          types: [{ description: "CSV Files", accept: { "text/csv": [".csv"] } }],
+          excludeAcceptAllOption: true,
+          multiple: false,
+        });
+
+        const file = await attendanceFileHandle.getFile();
+        const text = await file.text();
+        attendanceData = parseCSV(text);
+
+        // Simpan handle di localStorage (persist permission)
+        const handleId = await attendanceFileHandle.requestPermission({ mode: 'readwrite' });
+        if (handleId === 'granted') {
+          localStorage.setItem("attendanceFileHandle", "true");
+        }
+
+        console.log("📁 File CSV dipilih:", attendanceFileHandle.name);
+      } catch (err) {
+        console.error("❌ Gagal memilih file CSV:", err);
+        alert("Tidak dapat membuka file CSV. Browser harus mendukung File System Access API.");
+      }
+    }
+
+    // === Fungsi untuk restore handle file lama (Chrome) ===
+    async function getRestoredHandle() {
+      const handles = await window.navigator.storage.getDirectory();
+      return attendanceFileHandle || null;
+    }
+
+    // === Parse CSV ke array objek ===
+    function parseCSV(text) {
+      const lines = text.trim().split("\n");
+      const headers = lines[0].split(",").map(h => h.trim());
+      return lines.slice(1).map(line => {
+        const values = line.split(",");
+        const obj = {};
+        headers.forEach((h, i) => obj[h] = values[i]?.replace(/(^"|"$)/g, "").trim());
+        return obj;
+      });
+    }
+
+    // === Konversi array objek ke CSV string ===
+    function toCSV(data) {
+      const headers = ["Tanggal", "NIS", "Nama", "Kelas", "Status"];
+      const csv = [
+        headers.join(","),
+        ...data.map(row => headers.map(h => `"${row[h] || ""}"`).join(","))
+      ].join("\n");
+      return csv;
+    }
+
+    // === Simpan data ke file lokal ===
+    async function saveCSVFile(data) {
+      try {
+        if (!attendanceFileHandle) {
+          await selectCSVFile();
+        }
+
+        const writable = await attendanceFileHandle.createWritable();
+        await writable.write(toCSV(data));
+        await writable.close();
+
+        alert("✅ Data absensi berhasil disimpan!");
+      } catch (err) {
+        console.error("❌ Gagal menyimpan file:", err);
+        alert("Gagal menyimpan file. Periksa izin akses browser.");
+      }
+    }
+
+    // === Event: Submit Form ===
+    document.getElementById("attendanceForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const tanggal = document.getElementById("dateInput").value;
+      const nis = document.getElementById("studentSelect").value;
+      const kelas = document.getElementById("classSelect").value;
+      const status = document.querySelector('input[name="status"]:checked')?.value;
+
+      if (!tanggal || !nis || !kelas || !status) {
+        alert("⚠️ Harap lengkapi semua data sebelum menyimpan!");
+        return;
+      }
+
+      const siswa = window.studentsData.find(s => s.nis === nis);
+      const nama = siswa ? siswa.nama : "";
+
+      const newRow = {
+        Tanggal: tanggal,
+        NIS: nis,
+        Nama: nama,
+        Kelas: kelas,
+        Status: status.charAt(0).toUpperCase() + status.slice(1)
+      };
+
+      // Tambah data baru ke array
+      attendanceData.push(newRow);
+
+      // Simpan ke file CSV
+      await saveCSVFile(attendanceData);
+
+      //resetForm();
+    });
+
+    // Jalankan inisialisasi
+    document.addEventListener("DOMContentLoaded", initDropdowns);
+  </script>
+</body>
+</html>

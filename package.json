@@ -1,0 +1,7 @@
+{
+  "name": "absensi-app",
+  "version": "1.0.0",
+  "dependencies": {
+    "@influxdata/influxdb-client": "^1.35.0"
+  }
+}
