@@ -1,49 +1,63 @@
-// api/fetch.js
-import { InfluxDB } from '@influxdata/influxdb-client'
+import { InfluxDB } from "@influxdata/influxdb-client";
 
 export default async function handler(req, res) {
-  const { tahun, bulan, kelas } = req.query
-
-  const url = process.env.INFLUX_URL
-  const token = process.env.INFLUX_TOKEN
-  const org = process.env.INFLUX_ORG
-  const bucket = process.env.INFLUX_BUCKET
-
   try {
-    const influxDB = new InfluxDB({ url, token })
-    const queryApi = influxDB.getQueryApi(org)
+    const { tahun, bulan, kelas } = req.query;
 
-    // Query: ambil data absensi bulan dan tahun tertentu
+    if (!tahun || !bulan) {
+      return res.status(400).json({ error: "Parameter tahun dan bulan wajib diisi" });
+    }
+
+    const url = process.env.INFLUX_URL;
+    const token = process.env.INFLUX_TOKEN;
+    const org = process.env.INFLUX_ORG;
+    const bucket = process.env.INFLUX_BUCKET;
+
+    if (!url || !token || !org || !bucket) {
+      console.error("❌ ENV tidak lengkap:", { url, token: !!token, org, bucket });
+      return res.status(500).json({ error: "Konfigurasi server tidak lengkap (cek Environment Variables di Vercel)" });
+    }
+
+    const influxDB = new InfluxDB({ url, token });
+    const queryApi = influxDB.getQueryApi(org);
+
+    const start = `${tahun}-${bulan.toString().padStart(2, "0")}-01T00:00:00Z`;
+    const endDate = new Date(tahun, bulan, 0);
+    const end = `${tahun}-${bulan.toString().padStart(2, "0")}-${endDate.getDate()}T23:59:59Z`;
+
     let fluxQuery = `
       from(bucket: "${bucket}")
-        |> range(start: ${tahun}-${bulan.padStart(2, '0')}-01T00:00:00Z, stop: ${tahun}-${bulan.padStart(2, '0')}-31T23:59:59Z)
+        |> range(start: ${JSON.stringify(start)}, stop: ${JSON.stringify(end)})
         |> filter(fn: (r) => r._measurement == "absensi")
-    `
-    if (kelas) fluxQuery += `|> filter(fn: (r) => r.kelas == "${kelas}")`
+        |> filter(fn: (r) => r._field == "status_text")
+    `;
 
-    const data = []
-    console.log("🔍 Query:", fluxQuery)
+    if (kelas) {
+      fluxQuery += `|> filter(fn: (r) => r.kelas == "${kelas}")`;
+    }
+
+    console.log("🔍 Query:", fluxQuery);
+
+    const data = [];
     await queryApi.collectRows(fluxQuery, {
       next(row, tableMeta) {
-        const o = tableMeta.toObject(row)
+        const o = tableMeta.toObject(row);
         data.push({
           tanggal: o._time,
-          status: o.status_text,
           kelas: o.kelas,
           nama: o.nama,
           nis: o.nis,
-        })
+          status: o._value
+        });
       },
-      error(err) {
-        console.error('❌ Query error:', err)
-        res.status(500).json({ error: 'Query gagal' })
+      error(error) {
+        console.error("❌ Query error:", error);
       },
       complete() {
-        res.status(200).json(data)
-      },
-    })
+        console.log(`✅ Total data diambil: ${data.length}`);
+      }
+    });
+
+    return res.status(200).json(data);
   } catch (err) {
-    console.error('❌ Gagal ambil data:', err)
-    res.status(500).json({ error: 'Gagal mengambil data dari InfluxDB' })
-  }
-}
+    console.error("
