@@ -18,14 +18,12 @@ export default async function handler(req, res) {
     const influxDB = new InfluxDB({ url, token });
     const queryApi = influxDB.getQueryApi(org);
 
-    const startDate = new Date(`${tahun}-${bulan.toString().padStart(2,'0')}-01T00:00:00Z`);
-    const stopMonth = (parseInt(bulan) % 12 + 1).toString().padStart(2,'0');
-    const stopYear = bulan == 12 ? parseInt(tahun)+1 : tahun;
-    const stopDate = new Date(`${stopYear}-${stopMonth}-01T00:00:00Z`);
+    const startDate = new Date(tahun, bulan-1, 1); // bulan 0-index
+    const stopDate = new Date(tahun, bulan, 1); // bulan berikutnya
     
     const fluxQuery = `
-    from(bucket: "${bucket}")
-      |> range(start: v.time(v: "${startDate.toISOString()}"), stop: v.time(v: "${stopDate.toISOString()}"))
+    from(bucket: "absensi")
+      |> range(start: ${startDate.toISOString()}, stop: ${stopDate.toISOString()})
       |> filter(fn: (r) => r._measurement == "absensi")
       |> group(columns: ["kelas", "status", "nama", "nis"])
       |> keep(columns: ["_time", "_value", "kelas", "status", "nama", "nis"])
@@ -52,4 +50,5 @@ export default async function handler(req, res) {
   }
 
 }
+
 
