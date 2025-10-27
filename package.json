@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "dependencies": {
-    "@influxdata/influxdb-client": "^1.33.0"
+    "@influxdata/influxdb-client": "^1.33.0",
+    "csv-parse": "^5.5.5",
+    "csv-stringify": "^6.5.0"
   }
 }
+
