@@ -773,18 +773,18 @@
         alert("⚠️ Harap pilih tanggal dan kelas terlebih dahulu!");
         return;
       }
-
+    
       // Ambil semua siswa yang sudah dipilih statusnya
       const studentItems = document.querySelectorAll('.student-item');
       const attendanceData = [];
-
+    
       studentItems.forEach(item => {
         const activeBtn = item.querySelector('.status-btn.active');
         if (activeBtn) {
           const nis = activeBtn.dataset.nis;
           const status = activeBtn.dataset.status;
           const siswa = window.studentsData.find(s => s.nis === nis);
-          
+    
           if (siswa) {
             attendanceData.push({
               tanggal,
@@ -796,43 +796,38 @@
           }
         }
       });
-
+    
       if (attendanceData.length === 0) {
         alert("⚠️ Harap pilih status kehadiran untuk minimal satu siswa!");
         return;
       }
     
-      // === Kirim ke API Vercel untuk simpan ke InfluxDB ===
       try {
-        const response = await fetch("/api/save", {
+        // === KIRIM KE API UNTUK UPDATE CSV DI GITHUB ===
+        console.log("📤 Mengirim data ke /api/update_csv...");
+        const response = await fetch("/api/update_csv", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            bulk: true,
-            data: attendanceData
-          })
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ data: attendanceData })
         });
-        
-        console.log("kirim data");
+    
         const result = await response.json();
-        console.log("response: ", result);
-        
+    
         if (response.ok) {
-          console.log("✅ Tersimpan ke InfluxDB:", result);
+          console.log("✅ CSV di GitHub berhasil diperbarui:", result);
           const msg = document.getElementById("successMessage");
-          msg.querySelector('span:last-child').textContent = 
-            `Data absensi ${attendanceData.length} siswa berhasil disimpan!`;
+          msg.querySelector('span:last-child').textContent =
+            `Data absensi ${attendanceData.length} siswa berhasil disimpan ke GitHub!`;
           msg.classList.add("show");
           setTimeout(() => {
             msg.classList.remove("show");
             resetForm();
           }, 3000);
         } else {
-          console.error("❌ Gagal simpan ke InfluxDB:", result.error);
-          alert("Gagal simpan ke InfluxDB: " + result.error);
+          console.error("❌ Gagal update CSV:", result.error);
+          alert("Gagal menyimpan ke GitHub: " + (result.error?.message || JSON.stringify(result.error)));
         }
+    
       } catch (err) {
         console.error("❌ Error fetch:", err);
         alert("Tidak bisa mengirim data ke server. Periksa koneksi internet atau backend API.");
@@ -844,3 +839,4 @@
   </script>
 </body>
 </html>
+
