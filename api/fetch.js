@@ -1,57 +1,43 @@
 // /api/fetch.js
-import { InfluxDB } from '@influxdata/influxdb-client';
-
-const url = process.env.INFLUX_URL;
-const token = process.env.INFLUX_TOKEN;
-const org = process.env.INFLUX_ORG;
-const bucket = 'absensi';
+import { parse } from "csv-parse/sync";
 
 export default async function handler(req, res) {
-  const { tahun, bulan, kelas } = req.query;
-
-  if (!tahun || !bulan) {
-    return res.status(400).json({ error: 'Parameter tahun dan bulan wajib' });
-  }
-
   try {
-    const queryApi = new InfluxDB({ url, token }).getQueryApi(org);
+    const { tahun, bulan, kelas } = req.query;
+    const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+    const REPO = "USERNAME/REPO"; // 🔧 Ganti ke repo kamu
 
-    const startDate = `${tahun}-${String(bulan).padStart(2, '0')}-01T00:00:00Z`;
-    const nextMonth = new Date(tahun, bulan, 1);
-    nextMonth.setMonth(nextMonth.getMonth() + 1);
-    const stopDate = nextMonth.toISOString();
-
-    let fluxQuery = `
-      from(bucket: "${bucket}")
-        |> range(start: ${startDate}, stop: ${stopDate})
-        |> filter(fn: (r) => r._measurement == "absensi")
-    `;
-
-    if (kelas) {
-      fluxQuery += `
-        |> filter(fn: (r) => r.kelas == "${kelas}")
-      `;
+    if (!tahun || !bulan) {
+      return res.status(400).json({ error: "Parameter tahun dan bulan wajib diisi" });
     }
 
-    fluxQuery += `
-      |> keep(columns: ["_time", "_value", "kelas", "status", "nama", "nis"])
-    `;
+    const monthNames = [
+      "january","february","march","april","may","june",
+      "july","august","september","october","november","december"
+    ];
+    const fileName = `attendance_${monthNames[bulan - 1]}_${tahun}.csv`;
 
-    // Ambil data
-    const rows = await queryApi.collectRows(fluxQuery);
+    // 🔹 Ambil file CSV dari GitHub
+    const githubRes = await fetch(`https://api.github.com/repos/${REPO}/contents/${fileName}`, {
+      headers: { Authorization: `token ${GITHUB_TOKEN}` },
+    });
 
-    // Format sederhana
-    const data = rows.map(r => ({
-      tanggal: r._time,
-      kelas: r.kelas,
-      status: r.status,
-      nama: r.nama,
-      nis: r.nis
-    }));
+    if (!githubRes.ok) {
+      return res.status(404).json({ error: `File ${fileName} tidak ditemukan di repo GitHub` });
+    }
 
-    res.status(200).json(data);
+    const fileData = await githubRes.json();
+    const csvContent = Buffer.from(fileData.content, "base64").toString("utf8");
+
+    // 🔹 Ubah CSV ke JSON
+    const records = parse(csvContent, { columns: true, skip_empty_lines: true });
+
+    // 🔹 Filter kelas jika diperlukan
+    const filtered = kelas ? records.filter(r => r.kelas === kelas) : records;
+
+    return res.status(200).json(filtered);
   } catch (err) {
-    console.error('❌ Flux query failed:', err);
-    res.status(500).json({ error: err.message });
+    console.error("❌ Gagal fetch data:", err);
+    return res.status(500).json({ error: err.message });
   }
 }
