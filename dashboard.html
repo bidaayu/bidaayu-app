@@ -164,28 +164,37 @@
         document.getElementById('comparisonSection').style.display = 'none';
         return;
       }
-
+    
       const prevMonth = month == 1 ? 12 : month - 1;
       const prevYear = month == 1 ? year - 1 : year;
-
+    
       const currRecords = filterByMonth(records, month, year);
       const prevRecords = filterByMonth(records, prevMonth, prevYear);
-
+    
       const currStats = calcStats(currRecords);
       const prevStats = calcStats(prevRecords);
-
+    
+      // Hitung total dan persentase
+      const currTotal = currStats.hadir + currStats.izin + currStats.sakit + currStats.alfa;
+      const prevTotal = prevStats.hadir + prevStats.izin + prevStats.sakit + prevStats.alfa;
+    
+      const toPercent = (val, total) => total ? ((val / total) * 100).toFixed(1) + '%' : '0%';
+    
       document.getElementById('prevMonthTitle').textContent = `${monthNames[prevMonth]} ${prevYear}`;
       document.getElementById('currMonthTitle').textContent = `${monthNames[month]} ${year}`;
-      document.getElementById('prevHadir').textContent = prevStats.hadir;
-      document.getElementById('prevIzin').textContent = prevStats.izin;
-      document.getElementById('prevSakit').textContent = prevStats.sakit;
-      document.getElementById('prevAlfa').textContent = prevStats.alfa;
-      document.getElementById('currHadir').textContent = currStats.hadir;
-      document.getElementById('currIzin').textContent = currStats.izin;
-      document.getElementById('currSakit').textContent = currStats.sakit;
-      document.getElementById('currAlfa').textContent = currStats.alfa;
+    
+      // 🔹 Tampilkan persentase, bukan angka
+      document.getElementById('prevHadir').textContent = toPercent(prevStats.hadir, prevTotal);
+      document.getElementById('prevIzin').textContent = toPercent(prevStats.izin, prevTotal);
+      document.getElementById('prevSakit').textContent = toPercent(prevStats.sakit, prevTotal);
+      document.getElementById('prevAlfa').textContent = toPercent(prevStats.alfa, prevTotal);
+      document.getElementById('currHadir').textContent = toPercent(currStats.hadir, currTotal);
+      document.getElementById('currIzin').textContent = toPercent(currStats.izin, currTotal);
+      document.getElementById('currSakit').textContent = toPercent(currStats.sakit, currTotal);
+      document.getElementById('currAlfa').textContent = toPercent(currStats.alfa, currTotal);
+    
       document.getElementById('comparisonSection').style.display = 'grid';
-
+    
       updateDailyChart(currRecords, month, year);
       updatePieChart(currStats);
     }
@@ -307,6 +316,7 @@
   </script>
 </body>
 </html>
+
 
 
 
