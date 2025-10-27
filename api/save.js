@@ -18,6 +18,7 @@ export default async function handler(req, res) {
 
     // ✅ Jika mode bulk
     if (bulk && Array.isArray(data)) {
+      console.log("BULK DATA");
       data.forEach((item) => {
         const { tanggal, nis, nama, kelas, status } = item;
 
@@ -58,3 +59,4 @@ export default async function handler(req, res) {
     res.status(500).json({ error: err.message || 'Gagal menyimpan data ke InfluxDB' });
   }
 }
+
