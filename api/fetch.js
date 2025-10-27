@@ -5,7 +5,7 @@ export default async function handler(req, res) {
   try {
     const { tahun, bulan, kelas } = req.query;
     const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-    const REPO = "USERNAME/REPO"; // 🔧 Ganti ke repo kamu
+    const REPO = "bidaayu/bidaayu-app"; // 🔧 Ganti ke repo kamu
 
     if (!tahun || !bulan) {
       return res.status(400).json({ error: "Parameter tahun dan bulan wajib diisi" });
@@ -41,3 +41,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: err.message });
   }
 }
+
