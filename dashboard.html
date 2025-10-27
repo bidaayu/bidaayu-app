@@ -120,24 +120,38 @@
     });
 
     async function loadData() {
-      const month = document.getElementById('monthSelect').value;
-      const year = document.getElementById('yearSelect').value;
+      const month = parseInt(document.getElementById('monthSelect').value);
+      const year = parseInt(document.getElementById('yearSelect').value);
       const kelas = document.getElementById('classSelect').value;
       const status = document.getElementById('status');
       const errorDiv = document.getElementById('errorMessage');
       status.textContent = "🔄 Mengambil data dari server...";
       errorDiv.textContent = "";
-
+    
+      const prevMonth = month === 1 ? 12 : month - 1;
+      const prevYear = month === 1 ? year - 1 : year;
+    
       try {
-        const url = `/api/fetch?tahun=${year}&bulan=${month}${kelas ? `&kelas=${kelas}` : ''}`;
-        const res = await fetch(url);
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data = await res.json();
-
-        console.log("✅ Data diterima:", data.length, "record");
+        const urlCurr = `/api/fetch?tahun=${year}&bulan=${month}${kelas ? `&kelas=${kelas}` : ''}`;
+        const urlPrev = `/api/fetch?tahun=${prevYear}&bulan=${prevMonth}${kelas ? `&kelas=${kelas}` : ''}`;
+    
+        // Ambil data dua bulan sekaligus
+        const [resCurr, resPrev] = await Promise.all([fetch(urlCurr), fetch(urlPrev)]);
+    
+        if (!resCurr.ok && !resPrev.ok) throw new Error(`HTTP ${resCurr.status} & ${resPrev.status}`);
+    
+        const [dataCurr, dataPrev] = await Promise.all([
+          resCurr.ok ? resCurr.json() : [],
+          resPrev.ok ? resPrev.json() : []
+        ]);
+    
+        // Gabungkan dua bulan agar bisa dibandingkan
+        const allData = [...dataCurr, ...dataPrev];
+    
+        console.log(`✅ Data diterima: ${dataCurr.length} bulan ini + ${dataPrev.length} bulan lalu`);
         status.textContent = "✅ Data berhasil dimuat";
-
-        updateDashboard(data, month, year);
+    
+        updateDashboard(allData, month, year);
       } catch (err) {
         console.error("❌ Gagal ambil data:", err);
         status.textContent = "❌ Gagal memuat data";
@@ -293,6 +307,7 @@
   </script>
 </body>
 </html>
+
 
 
 
