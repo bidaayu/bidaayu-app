@@ -5,74 +5,68 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Metode tidak diizinkan' });
   }
 
+  const url = process.env.INFLUX_URL;
+  const token = process.env.INFLUX_TOKEN;
+  const org = process.env.INFLUX_ORG;
+  const bucket = process.env.INFLUX_BUCKET;
+
+  const client = new InfluxDB({ url, token });
+  const writeApi = client.getWriteApi(org, bucket, 'ns');
+
   try {
     const { bulk, data } = req.body;
 
-    const url = process.env.INFLUX_URL;
-    const token = process.env.INFLUX_TOKEN;
-    const org = process.env.INFLUX_ORG;
-    const bucket = process.env.INFLUX_BUCKET;
-
-    const client = new InfluxDB({ url, token });
-    const writeApi = client.getWriteApi(org, bucket, 'ns');
-
-    // === LOG AWAL ===
     console.log("📥 [SAVE] Permintaan diterima");
-    console.log("🔹 Mode Bulk:", bulk);
-    console.log("🔹 Jumlah data diterima:", bulk && data ? data.length : 1);
+    console.log(`🔹 Mode Bulk: ${bulk}`);
+    console.log(`🔹 Jumlah data diterima: ${data?.length || 0}`);
 
     if (bulk && Array.isArray(data)) {
-      data.forEach((item, index) => {
+      let counter = 0;
+      for (const item of data) {
         const { tanggal, nis, nama, kelas, status } = item;
-
-        const ts = new Date(tanggal);
-        const now = new Date();
-
-        // 🔒 Hindari error 'timestamp out of retention'
-        const timestamp = (now - ts > 1000 * 60 * 60 * 24 * 30) ? now : ts;
 
         const point = new Point('absensi')
           .tag('kelas', kelas)
           .tag('status', status)
           .stringField('nama', nama)
           .stringField('nis', nis)
-          .timestamp(timestamp);
+          .timestamp(new Date(tanggal));
 
         writeApi.writePoint(point);
+        counter++;
 
-        // === LOG PER DATA ===
-        console.log(`✅ [${index + 1}] ${nama} (${nis}) - ${kelas} - ${status} @ ${timestamp.toISOString()}`);
-      });
-    } else {
-      // fallback kalau bukan bulk
-      const { tanggal, nis, nama, kelas, status } = req.body;
-      const timestamp = new Date(tanggal);
+        console.log(`✅ [${counter}] ${nama} (${nis}) - ${kelas} - ${status} @ ${tanggal}`);
 
-      const point = new Point('absensi')
-        .tag('kelas', kelas)
-        .tag('status', status)
-        .stringField('nama', nama)
-        .stringField('nis', nis)
-        .timestamp(timestamp);
+        // beri jeda kecil agar semua data benar-benar terkirim (Vercel cepat menutup koneksi)
+        await new Promise(resolve => setTimeout(resolve, 50));
+      }
 
-      writeApi.writePoint(point);
+      // flush semua sebelum close
+      await writeApi.flush();
+      await writeApi.close();
 
-      console.log(`✅ [Single] ${nama} (${nis}) - ${kelas} - ${status} @ ${timestamp.toISOString()}`);
+      console.log("🎯 Semua data absensi berhasil dikirim ke InfluxDB!");
+      return res.status(200).json({ success: true, count: data.length });
     }
 
+    // === MODE SATUAN (non-bulk) ===
+    const { tanggal, nis, nama, kelas, status } = req.body;
+
+    const point = new Point('absensi')
+      .tag('kelas', kelas)
+      .tag('status', status)
+      .stringField('nama', nama)
+      .stringField('nis', nis)
+      .timestamp(new Date(tanggal));
+
+    writeApi.writePoint(point);
+    await writeApi.flush();
     await writeApi.close();
 
-    console.log("🎯 Semua data absensi berhasil dikirim ke InfluxDB!\n");
-
-    res.status(200).json({
-      success: true,
-      message: '✅ Semua data absensi tersimpan ke InfluxDB!'
-    });
-
+    console.log(`✅ [SINGLE] ${nama} (${nis}) - ${kelas} - ${status} @ ${tanggal}`);
+    res.status(200).json({ success: true });
   } catch (err) {
-    console.error('❌ Gagal simpan ke InfluxDB:', err);
-    res.status(500).json({
-      error: err.message || 'Gagal menyimpan data ke InfluxDB'
-    });
+    console.error("❌ Gagal simpan ke InfluxDB:", err);
+    res.status(500).json({ error: err.message || 'Gagal menyimpan data ke InfluxDB' });
   }
 }
