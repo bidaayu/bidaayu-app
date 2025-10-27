@@ -22,26 +22,29 @@ export default async function handler(req, res) {
 
     if (bulk && Array.isArray(data)) {
       let counter = 0;
+      const baseTime = new Date(data[0]?.tanggal || Date.now());
+
       for (const item of data) {
         const { tanggal, nis, nama, kelas, status } = item;
+
+        // buat waktu unik untuk setiap siswa (tambah 1 detik per siswa)
+        const ts = new Date(baseTime.getTime() + counter * 1000);
 
         const point = new Point('absensi')
           .tag('kelas', kelas)
           .tag('status', status)
           .stringField('nama', nama)
           .stringField('nis', nis)
-          .timestamp(new Date(tanggal));
+          .timestamp(ts);
 
         writeApi.writePoint(point);
         counter++;
 
-        console.log(`✅ [${counter}] ${nama} (${nis}) - ${kelas} - ${status} @ ${tanggal}`);
+        console.log(`✅ [${counter}] ${nama} (${nis}) - ${kelas} - ${status} @ ${ts.toISOString()}`);
 
-        // beri jeda kecil agar semua data benar-benar terkirim (Vercel cepat menutup koneksi)
-        await new Promise(resolve => setTimeout(resolve, 50));
+        await new Promise(resolve => setTimeout(resolve, 30)); // kecil saja cukup
       }
 
-      // flush semua sebelum close
       await writeApi.flush();
       await writeApi.close();
 
@@ -49,9 +52,8 @@ export default async function handler(req, res) {
       return res.status(200).json({ success: true, count: data.length });
     }
 
-    // === MODE SATUAN (non-bulk) ===
+    // === MODE SATUAN ===
     const { tanggal, nis, nama, kelas, status } = req.body;
-
     const point = new Point('absensi')
       .tag('kelas', kelas)
       .tag('status', status)
