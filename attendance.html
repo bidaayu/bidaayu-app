@@ -762,10 +762,17 @@
       document.getElementById("studentList").innerHTML = '';
     }
 
+    let isSaving = false;
     // === Event: Submit Form ===
     document.getElementById("attendanceForm").addEventListener("submit", async (e) => {
       e.preventDefault();
-    
+      
+      if (isSaving) {
+        console.warn("⏳ Sedang menyimpan, tunggu dulu...");
+        return;
+      }
+      isSaving = true; // ✅ kunci supaya tidak double submit
+      
       const tanggal = document.getElementById("dateInput").value;
       const kelas = document.getElementById("classSelect").value;
     
@@ -831,6 +838,8 @@
       } catch (err) {
         console.error("❌ Error fetch:", err);
         alert("Tidak bisa mengirim data ke server. Periksa koneksi internet atau backend API.");
+      } finally {
+        isSaving = false; // 🔓 buka kunci setelah selesai
       }
     });
 
@@ -839,4 +848,5 @@
   </script>
 </body>
 </html>
+
 
