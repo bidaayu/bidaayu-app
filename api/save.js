@@ -6,7 +6,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { data, bulk, tanggal, nis, nama, kelas, status } = req.body;
+    const { bulk, data } = req.body;
 
     const url = process.env.INFLUX_URL;
     const token = process.env.INFLUX_TOKEN;
@@ -16,21 +16,30 @@ export default async function handler(req, res) {
     const client = new InfluxDB({ url, token });
     const writeApi = client.getWriteApi(org, bucket, 'ns');
 
-    // === Mode bulk ===
+    // ✅ Jika mode bulk
     if (bulk && Array.isArray(data)) {
       data.forEach((item) => {
+        const { tanggal, nis, nama, kelas, status } = item;
+
+        const ts = new Date(tanggal);
+        const now = new Date();
+
+        // Hindari timestamp out of retention period
+        const timestamp = (now - ts > 1000 * 60 * 60 * 24 * 30) ? now : ts;
+
         const point = new Point('absensi')
-          .tag('kelas', item.kelas)
-          .tag('status', item.status)
-          .stringField('nama', item.nama)
-          .stringField('nis', item.nis)
-          .timestamp(new Date(item.tanggal));
+          .tag('kelas', kelas)
+          .tag('status', status)
+          .stringField('nama', nama)
+          .stringField('nis', nis)
+          .timestamp(timestamp);
 
         writeApi.writePoint(point);
       });
-    } 
-    // === Mode tunggal ===
-    else if (tanggal && nis && nama && kelas && status) {
+    } else {
+      // fallback kalau bukan bulk
+      const { tanggal, nis, nama, kelas, status } = req.body;
+
       const point = new Point('absensi')
         .tag('kelas', kelas)
         .tag('status', status)
@@ -39,15 +48,13 @@ export default async function handler(req, res) {
         .timestamp(new Date(tanggal));
 
       writeApi.writePoint(point);
-    } 
-    else {
-      return res.status(400).json({ error: 'Data tidak lengkap atau format salah' });
     }
 
     await writeApi.close();
-    res.status(200).json({ success: true, message: 'Data absensi berhasil disimpan ke InfluxDB' });
+
+    res.status(200).json({ success: true, message: '✅ Semua data absensi tersimpan ke InfluxDB!' });
   } catch (err) {
     console.error('❌ Gagal simpan ke InfluxDB:', err);
-    res.status(500).json({ error: 'Gagal menyimpan data ke InfluxDB', detail: err.message });
+    res.status(500).json({ error: err.message || 'Gagal menyimpan data ke InfluxDB' });
   }
 }
