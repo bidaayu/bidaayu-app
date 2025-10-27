@@ -173,7 +173,7 @@
     }
 
     .form-container {
-      max-width: 900px;
+      max-width: 1200px;
       margin: 0 auto;
       background: var(--glass-bg);
       border-radius: 32px;
@@ -300,40 +300,77 @@
       padding-right: 50px;
     }
 
-    .status-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 16px;
-    }
-
-    .status-option {
-      position: relative;
-    }
-
-    .status-option input[type="radio"] {
-      position: absolute;
-      opacity: 0;
-      cursor: pointer;
-    }
-
-    .status-label {
+    /* Student List Styles */
+    .student-list {
       display: flex;
       flex-direction: column;
+      gap: 12px;
+      max-height: 600px;
+      overflow-y: auto;
+      padding: 4px;
+    }
+
+    .student-item {
+      display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 24px 16px;
-      border-radius: 20px;
-      border: 2px solid var(--border-color);
+      justify-content: space-between;
+      padding: 16px 20px;
       background: var(--glass-bg);
-      cursor: pointer;
+      border: 2px solid var(--border-color);
+      border-radius: 16px;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
+      gap: 16px;
+    }
+
+    .student-item:hover {
+      border-color: rgba(126, 201, 130, 0.5);
+      transform: translateX(4px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .student-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .student-name {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text-primary);
+    }
+
+    .student-nis {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    .status-buttons {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .status-btn {
+      padding: 10px 16px;
+      border: 2px solid var(--border-color);
+      border-radius: 12px;
+      background: var(--glass-bg);
+      color: var(--text-primary);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
       position: relative;
       overflow: hidden;
     }
 
-    .status-label::before {
+    .status-btn::before {
       content: '';
       position: absolute;
       top: 0;
@@ -346,50 +383,30 @@
       z-index: 0;
     }
 
-    .status-label .icon,
-    .status-label .text {
+    .status-btn span {
       position: relative;
       z-index: 1;
-      transition: all 0.3s ease;
     }
 
-    .status-option input[type="radio"]:checked + .status-label {
-      border-color: transparent;
-      transform: translateY(-4px) scale(1.05);
-      box-shadow: var(--shadow-intense);
-    }
-
-    .status-option input[type="radio"]:checked + .status-label::before {
-      opacity: 1;
-    }
-
-    .status-option input[type="radio"]:checked + .status-label .icon,
-    .status-option input[type="radio"]:checked + .status-label .text {
-      color: white;
-    }
-
-    .status-label:hover {
-      transform: translateY(-4px);
-      border-color: rgba(126, 201, 130, 0.5);
+    .status-btn:hover {
+      transform: translateY(-2px);
       box-shadow: var(--shadow-glow);
     }
 
-    .status-label .icon {
-      font-size: 2rem;
-      margin-bottom: 8px;
+    .status-btn.active {
+      border-color: transparent;
+      color: white;
+      transform: scale(1.05);
     }
 
-    .status-label .text {
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+    .status-btn.active::before {
+      opacity: 1;
     }
 
-    .status-hadir { --gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); }
-    .status-sakit { --gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
-    .status-izin { --gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
-    .status-alfa { --gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+    .status-btn.hadir { --gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); }
+    .status-btn.sakit { --gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+    .status-btn.izin { --gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+    .status-btn.alfa { --gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
 
     .button-group {
       display: flex;
@@ -510,21 +527,27 @@
         font-size: 1.5rem;
       }
 
-      .status-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-      }
-
-      .status-label {
-        padding: 20px 12px;
-      }
-
       .button-group {
         flex-direction: column;
       }
 
       .btn {
         width: 100%;
+      }
+
+      .student-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .status-buttons {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .status-btn {
+        flex: 1;
+        min-width: 70px;
       }
     }
 
@@ -560,19 +583,9 @@
 
   <div class="form-container">
     <h2 class="form-title">Form Pencatatan Kehadiran</h2>
-    <p class="form-subtitle">Silakan isi data absensi siswa dengan lengkap dan akurat</p>
+    <p class="form-subtitle">Pilih kelas untuk menampilkan seluruh siswa dan tandai status kehadiran mereka</p>
 
     <form id="attendanceForm">
-      <div class="form-group">
-        <label class="form-label">
-          <span class="icon">📋</span>
-          Daftar Kehadiran Tanggal <span id="selectedDateLabel"></span>
-        </label>
-        <div id="attendanceList" class="attendance-list">
-          <p>Belum ada data untuk tanggal ini.</p>
-        </div>
-      </div>
-
       <div class="form-group">
         <label class="form-label">
           <span class="icon">📅</span>
@@ -596,53 +609,13 @@
         </select>
       </div>
 
-      <div class="form-group">
+      <div class="form-group" id="studentListContainer" style="display: none;">
         <label class="form-label">
           <span class="icon">👨‍🎓</span>
-          Nama Siswa
+          Daftar Siswa - Pilih Status Kehadiran
         </label>
-        <select id="studentSelect" class="form-select" required>
-          <option value="">-- Pilih Siswa --</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label class="form-label">
-          <span class="icon">✅</span>
-          Status Kehadiran
-        </label>
-        <div class="status-grid">
-          <div class="status-option">
-            <input type="radio" id="hadir" name="status" value="hadir" required />
-            <label for="hadir" class="status-label status-hadir">
-              <span class="icon">✅</span>
-              <span class="text">Hadir</span>
-            </label>
-          </div>
-
-          <div class="status-option">
-            <input type="radio" id="sakit" name="status" value="sakit" />
-            <label for="sakit" class="status-label status-sakit">
-              <span class="icon">🤒</span>
-              <span class="text">Sakit</span>
-            </label>
-          </div>
-
-          <div class="status-option">
-            <input type="radio" id="izin" name="status" value="izin" />
-            <label for="izin" class="status-label status-izin">
-              <span class="icon">📋</span>
-              <span class="text">Izin</span>
-            </label>
-          </div>
-
-          <div class="status-option">
-            <input type="radio" id="alfa" name="status" value="alfa" />
-            <label for="alfa" class="status-label status-alfa">
-              <span class="icon">❌</span>
-              <span class="text">Alfa</span>
-            </label>
-          </div>
+        <div id="studentList" class="student-list">
+          <!-- Akan diisi oleh JavaScript -->
         </div>
       </div>
 
@@ -714,7 +687,8 @@
     async function initDropdowns() {
       const students = await loadCSV("students_all.csv");
       const classSelect = document.getElementById("classSelect");
-      const studentSelect = document.getElementById("studentSelect");
+      const studentListContainer = document.getElementById("studentListContainer");
+      const studentList = document.getElementById("studentList");
 
       // Ambil daftar kelas unik
       const classes = [...new Set(students.map(s => s.kelas))];
@@ -725,15 +699,55 @@
         classSelect.appendChild(opt);
       });
 
-      // Saat kelas berubah → tampilkan siswa kelas itu
+      // Saat kelas berubah → tampilkan seluruh siswa kelas itu
       classSelect.addEventListener("change", () => {
         const selected = classSelect.value;
-        studentSelect.innerHTML = '<option value="">-- Pilih Siswa --</option>';
-        students.filter(s => s.kelas === selected).forEach(s => {
-          const opt = document.createElement("option");
-          opt.value = s.nis;
-          opt.textContent = s.nama;
-          studentSelect.appendChild(opt);
+        studentList.innerHTML = '';
+        
+        if (!selected) {
+          studentListContainer.style.display = 'none';
+          return;
+        }
+
+        studentListContainer.style.display = 'block';
+        
+        const filteredStudents = students.filter(s => s.kelas === selected);
+        
+        filteredStudents.forEach((s, index) => {
+          const itemDiv = document.createElement("div");
+          itemDiv.className = "student-item";
+          itemDiv.innerHTML = `
+            <div class="student-info">
+              <div class="student-name">${s.nama}</div>
+              <div class="student-nis">NIS: ${s.nis}</div>
+            </div>
+            <div class="status-buttons">
+              <button type="button" class="status-btn hadir" data-nis="${s.nis}" data-status="hadir">
+                <span>✅ Hadir</span>
+              </button>
+              <button type="button" class="status-btn sakit" data-nis="${s.nis}" data-status="sakit">
+                <span>🤒 Sakit</span>
+              </button>
+              <button type="button" class="status-btn izin" data-nis="${s.nis}" data-status="izin">
+                <span>📋 Izin</span>
+              </button>
+              <button type="button" class="status-btn alfa" data-nis="${s.nis}" data-status="alfa">
+                <span>❌ Alfa</span>
+              </button>
+            </div>
+          `;
+          studentList.appendChild(itemDiv);
+
+          // Add click event to status buttons
+          const buttons = itemDiv.querySelectorAll('.status-btn');
+          buttons.forEach(btn => {
+            btn.addEventListener('click', function() {
+              // Remove active class from siblings
+              buttons.forEach(b => b.classList.remove('active'));
+              // Add active class to clicked button
+              this.classList.add('active');
+            });
+          });
         });
       });
 
@@ -744,6 +758,8 @@
     // === Fungsi reset form ===
     function resetForm() {
       document.getElementById("attendanceForm").reset();
+      document.getElementById("studentListContainer").style.display = 'none';
+      document.getElementById("studentList").innerHTML = '';
     }
 
     // === Event: Submit Form ===
@@ -751,24 +767,39 @@
       e.preventDefault();
     
       const tanggal = document.getElementById("dateInput").value;
-      const nis = document.getElementById("studentSelect").value;
       const kelas = document.getElementById("classSelect").value;
-      const status = document.querySelector('input[name="status"]:checked')?.value;
     
-      if (!tanggal || !nis || !kelas || !status) {
-        alert("⚠️ Harap lengkapi semua data sebelum menyimpan!");
+      if (!tanggal || !kelas) {
+        alert("⚠️ Harap pilih tanggal dan kelas terlebih dahulu!");
         return;
       }
-    
-      const siswa = window.studentsData.find(s => s.nis === nis);
-      const nama = siswa ? siswa.nama : "";
-    
-      const newRow = {
-        Tanggal: tanggal,
-        NIS: nis,
-        Nama: nama,
-        Kelas: kelas,
-        Status: status.charAt(0).toUpperCase() + status.slice(1)
+
+      // Ambil semua siswa yang sudah dipilih statusnya
+      const studentItems = document.querySelectorAll('.student-item');
+      const attendanceData = [];
+
+      studentItems.forEach(item => {
+        const activeBtn = item.querySelector('.status-btn.active');
+        if (activeBtn) {
+          const nis = activeBtn.dataset.nis;
+          const status = activeBtn.dataset.status;
+          const siswa = window.studentsData.find(s => s.nis === nis);
+          
+          if (siswa) {
+            attendanceData.push({
+              tanggal,
+              nis,
+              nama: siswa.nama,
+              kelas,
+              status
+            });
+          }
+        }
+      });
+
+      if (attendanceData.length === 0) {
+        alert("⚠️ Harap pilih status kehadiran untuk minimal satu siswa!");
+        return;
       }
     
       // === Kirim ke API Vercel untuk simpan ke InfluxDB ===
@@ -779,21 +810,25 @@
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            tanggal,
-            nis,
-            nama,
-            kelas,
-            status
+            bulk: true,
+            data: attendanceData
           })
         });
+        
         console.log("kirim data");
         const result = await response.json();
         console.log("response: ", result);
+        
         if (response.ok) {
           console.log("✅ Tersimpan ke InfluxDB:", result);
           const msg = document.getElementById("successMessage");
+          msg.querySelector('span:last-child').textContent = 
+            `Data absensi ${attendanceData.length} siswa berhasil disimpan!`;
           msg.classList.add("show");
-          setTimeout(() => msg.classList.remove("show"), 3000);
+          setTimeout(() => {
+            msg.classList.remove("show");
+            resetForm();
+          }, 3000);
         } else {
           console.error("❌ Gagal simpan ke InfluxDB:", result.error);
           alert("Gagal simpan ke InfluxDB: " + result.error);
@@ -804,13 +839,8 @@
       }
     });
 
-
     // Jalankan inisialisasi
     document.addEventListener("DOMContentLoaded", initDropdowns);
   </script>
 </body>
 </html>
-
-
-
-
