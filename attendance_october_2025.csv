@@ -1,18 +1,935 @@
 tanggal,nis,nama,kelas,status
-2025-10-01,1001,Freya Alodie Maheswari binti Danang Fauzi,0,hadir
 2025-10-01,1002,Defta Dwi Andika Lusiana Riadi binti Teguh Supriadi,0,hadir
-2025-10-01,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,hadir
-2025-10-01,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,izin
+2025-10-01,1008,Sabila Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-01,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-01,1001,Freya Alodie Maheswari binti Danang Fauzi,0,hadir
+2025-10-01,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,izin
 2025-10-01,1005,Eiji Zayyan Saputra bin Agung Saputra,0,alfa
-2025-10-01,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,hadir
-2025-10-01,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
-2025-10-01,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
-2025-10-01,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+2025-10-02,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,hadir
+2025-10-02,1005,Eiji Zayyan Saputra bin Agung Saputra,0,hadir
+2025-10-02,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-02,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,hadir
+2025-10-02,1008,Sabila Putri A. binti Faisal M. Rosyid,0,izin
+2025-10-02,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,izin
+2025-10-03,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-03,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,hadir
+2025-10-03,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,hadir
+2025-10-03,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,hadir
+2025-10-03,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,izin
+2025-10-03,1005,Eiji Zayyan Saputra bin Agung Saputra,0,alfa
+2025-10-04,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,hadir
+2025-10-04,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,hadir
+2025-10-04,1002,Defta Dwi Andika Lusiana Riadi binti Teguh Supriadi,0,hadir
+2025-10-04,1008,Sabila Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-04,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,alfa
+2025-10-04,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,alfa
+2025-10-06,1001,Freya Alodie Maheswari binti Danang Fauzi,0,hadir
+2025-10-06,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,hadir
+2025-10-06,1008,Sabila Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-06,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,hadir
+2025-10-06,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-06,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,alfa
+2025-10-07,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,hadir
+2025-10-07,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,hadir
+2025-10-07,1008,Sabila Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-07,1001,Freya Alodie Maheswari binti Danang Fauzi,0,hadir
+2025-10-07,1005,Eiji Zayyan Saputra bin Agung Saputra,0,hadir
+2025-10-07,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,hadir
+2025-10-08,1001,Freya Alodie Maheswari binti Danang Fauzi,0,hadir
+2025-10-08,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,hadir
+2025-10-08,1008,Sabila Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-08,1002,Defta Dwi Andika Lusiana Riadi binti Teguh Supriadi,0,hadir
+2025-10-08,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,hadir
+2025-10-08,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,izin
+2025-10-09,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-09,1001,Freya Alodie Maheswari binti Danang Fauzi,0,hadir
+2025-10-09,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,hadir
+2025-10-09,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,hadir
+2025-10-09,1008,Sabila Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-09,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,izin
+2025-10-10,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-10,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,hadir
+2025-10-10,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,hadir
+2025-10-10,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,hadir
+2025-10-10,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,izin
+2025-10-10,1008,Sabila Putri A. binti Faisal M. Rosyid,0,izin
+2025-10-11,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,hadir
+2025-10-11,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,hadir
+2025-10-11,1005,Eiji Zayyan Saputra bin Agung Saputra,0,hadir
+2025-10-11,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,izin
+2025-10-11,1008,Sabila Putri A. binti Faisal M. Rosyid,0,alfa
+2025-10-11,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,alfa
+2025-10-13,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,hadir
+2025-10-13,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,hadir
+2025-10-13,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,izin
+2025-10-13,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,izin
+2025-10-13,1008,Sabila Putri A. binti Faisal M. Rosyid,0,izin
+2025-10-13,1005,Eiji Zayyan Saputra bin Agung Saputra,0,alfa
+2025-10-14,1002,Defta Dwi Andika Lusiana Riadi binti Teguh Supriadi,0,hadir
+2025-10-14,1005,Eiji Zayyan Saputra bin Agung Saputra,0,hadir
+2025-10-14,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-14,1008,Sabila Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-14,1001,Freya Alodie Maheswari binti Danang Fauzi,0,hadir
+2025-10-14,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,izin
+2025-10-15,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,hadir
+2025-10-15,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,hadir
+2025-10-15,1005,Eiji Zayyan Saputra bin Agung Saputra,0,hadir
+2025-10-15,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-15,1001,Freya Alodie Maheswari binti Danang Fauzi,0,izin
+2025-10-15,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,izin
+2025-10-16,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-16,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,hadir
+2025-10-16,1008,Sabila Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-16,1001,Freya Alodie Maheswari binti Danang Fauzi,0,hadir
+2025-10-16,1002,Defta Dwi Andika Lusiana Riadi binti Teguh Supriadi,0,hadir
+2025-10-16,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,izin
+2025-10-17,1005,Eiji Zayyan Saputra bin Agung Saputra,0,hadir
+2025-10-17,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,hadir
+2025-10-17,1001,Freya Alodie Maheswari binti Danang Fauzi,0,hadir
+2025-10-17,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,izin
+2025-10-17,1002,Defta Dwi Andika Lusiana Riadi binti Teguh Supriadi,0,izin
+2025-10-17,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,izin
+2025-10-18,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,hadir
+2025-10-18,1001,Freya Alodie Maheswari binti Danang Fauzi,0,hadir
+2025-10-18,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,izin
+2025-10-18,1008,Sabila Putri A. binti Faisal M. Rosyid,0,izin
+2025-10-18,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,izin
+2025-10-18,1005,Eiji Zayyan Saputra bin Agung Saputra,0,alfa
+2025-10-20,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-20,1008,Sabila Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-20,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,hadir
+2025-10-20,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,hadir
+2025-10-20,1001,Freya Alodie Maheswari binti Danang Fauzi,0,alfa
+2025-10-20,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,alfa
+2025-10-21,1008,Sabila Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-21,1005,Eiji Zayyan Saputra bin Agung Saputra,0,hadir
+2025-10-21,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,hadir
+2025-10-21,1002,Defta Dwi Andika Lusiana Riadi binti Teguh Supriadi,0,hadir
+2025-10-21,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,hadir
+2025-10-21,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,izin
+2025-10-22,1002,Defta Dwi Andika Lusiana Riadi binti Teguh Supriadi,0,hadir
+2025-10-22,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-22,1005,Eiji Zayyan Saputra bin Agung Saputra,0,hadir
+2025-10-22,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,hadir
+2025-10-22,1008,Sabila Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-22,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,izin
+2025-10-23,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-23,1008,Sabila Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-23,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,hadir
+2025-10-23,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,hadir
+2025-10-23,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,hadir
+2025-10-23,1005,Eiji Zayyan Saputra bin Agung Saputra,0,hadir
+2025-10-24,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,hadir
+2025-10-24,1008,Sabila Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-24,1002,Defta Dwi Andika Lusiana Riadi binti Teguh Supriadi,0,hadir
+2025-10-24,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-24,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,izin
+2025-10-24,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,alfa
+2025-10-27,1002,Defta Dwi Andika Lusiana Riadi binti Teguh Supriadi,0,hadir
+2025-10-27,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,hadir
+2025-10-27,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,hadir
+2025-10-27,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,hadir
+2025-10-27,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,izin
+2025-10-27,1001,Freya Alodie Maheswari binti Danang Fauzi,0,izin
+2025-10-28,1005,Eiji Zayyan Saputra bin Agung Saputra,0,hadir
+2025-10-28,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,hadir
+2025-10-28,1001,Freya Alodie Maheswari binti Danang Fauzi,0,hadir
+2025-10-28,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,hadir
+2025-10-28,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,izin
+2025-10-28,1008,Sabila Putri A. binti Faisal M. Rosyid,0,izin
 2025-10-01,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
-2025-10-01,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
-2025-10-01,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
-2025-10-01,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
-2025-10-01,1018,Reno Agata bin Hery Purnomo,A,izin
 2025-10-01,1019,Juan Efendi bin Hery Purnomo,A,hadir
+2025-10-01,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+2025-10-01,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+2025-10-01,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
 2025-10-01,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+2025-10-01,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+2025-10-01,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
 2025-10-01,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+2025-10-01,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+2025-10-01,1018,Reno Agata bin Hery Purnomo,A,hadir
+2025-10-01,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,izin
+2025-10-02,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+2025-10-02,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+2025-10-02,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+2025-10-02,1019,Juan Efendi bin Hery Purnomo,A,hadir
+2025-10-02,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+2025-10-02,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+2025-10-02,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+2025-10-02,1018,Reno Agata bin Hery Purnomo,A,hadir
+2025-10-02,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+2025-10-02,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+2025-10-02,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+2025-10-02,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,izin
+2025-10-03,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+2025-10-03,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+2025-10-03,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+2025-10-03,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+2025-10-03,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+2025-10-03,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+2025-10-03,1019,Juan Efendi bin Hery Purnomo,A,hadir
+2025-10-03,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+2025-10-03,1018,Reno Agata bin Hery Purnomo,A,hadir
+2025-10-03,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+2025-10-03,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,izin
+2025-10-03,1021,Khalid Kamayel bin Aidil Fadli,A,izin
+2025-10-04,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+2025-10-04,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+2025-10-04,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+2025-10-04,1018,Reno Agata bin Hery Purnomo,A,hadir
+2025-10-04,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+2025-10-04,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+2025-10-04,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+2025-10-04,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+2025-10-04,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+2025-10-04,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,izin
+2025-10-04,1019,Juan Efendi bin Hery Purnomo,A,izin
+2025-10-04,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,alfa
+2025-10-06,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+2025-10-06,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+2025-10-06,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+2025-10-06,1019,Juan Efendi bin Hery Purnomo,A,hadir
+2025-10-06,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+2025-10-06,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+2025-10-06,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+2025-10-06,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+2025-10-06,1018,Reno Agata bin Hery Purnomo,A,hadir
+2025-10-06,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+2025-10-06,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+2025-10-06,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+2025-10-07,1018,Reno Agata bin Hery Purnomo,A,hadir
+2025-10-07,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+2025-10-07,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+2025-10-07,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+2025-10-07,1019,Juan Efendi bin Hery Purnomo,A,hadir
+2025-10-07,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+2025-10-07,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+2025-10-07,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+2025-10-07,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+2025-10-07,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+2025-10-07,1012,Dayinta Aida Afia binti Danang Fauzi,A,izin
+2025-10-07,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,alfa
+2025-10-08,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+2025-10-08,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+2025-10-08,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+2025-10-08,1019,Juan Efendi bin Hery Purnomo,A,hadir
+2025-10-08,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+2025-10-08,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+2025-10-08,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+2025-10-08,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+2025-10-08,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+2025-10-08,1018,Reno Agata bin Hery Purnomo,A,hadir
+2025-10-08,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,izin
+2025-10-08,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,izin
+2025-10-09,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+2025-10-09,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+2025-10-09,1018,Reno Agata bin Hery Purnomo,A,hadir
+2025-10-09,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+2025-10-09,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+2025-10-09,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+2025-10-09,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+2025-10-09,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+2025-10-09,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+2025-10-09,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+2025-10-09,1019,Juan Efendi bin Hery Purnomo,A,izin
+2025-10-09,1015,Athar Athaya Bakdas bin Abdi Satria,A,izin
+2025-10-10,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+2025-10-10,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+2025-10-10,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+2025-10-10,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+2025-10-10,1019,Juan Efendi bin Hery Purnomo,A,hadir
+2025-10-10,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+2025-10-10,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+2025-10-10,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+2025-10-10,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+2025-10-10,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+2025-10-10,1018,Reno Agata bin Hery Purnomo,A,hadir
+2025-10-10,1010,Arkha Wahyu Saputra bin wahyudin,A,izin
+2025-10-11,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+2025-10-11,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+2025-10-11,1018,Reno Agata bin Hery Purnomo,A,hadir
+2025-10-11,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+2025-10-11,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+2025-10-11,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+2025-10-11,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+2025-10-11,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+2025-10-11,1019,Juan Efendi bin Hery Purnomo,A,alfa
+2025-10-11,1021,Khalid Kamayel bin Aidil Fadli,A,alfa
+2025-10-11,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,alfa
+2025-10-11,1012,Dayinta Aida Afia binti Danang Fauzi,A,alfa
+2025-10-13,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+2025-10-13,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+2025-10-13,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+2025-10-13,1018,Reno Agata bin Hery Purnomo,A,hadir
+2025-10-13,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+2025-10-13,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+2025-10-13,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+2025-10-13,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+2025-10-13,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+2025-10-13,1019,Juan Efendi bin Hery Purnomo,A,hadir
+2025-10-13,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+2025-10-13,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,izin
+2025-10-14,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+2025-10-14,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+2025-10-14,1019,Juan Efendi bin Hery Purnomo,A,hadir
+2025-10-14,1018,Reno Agata bin Hery Purnomo,A,hadir
+2025-10-14,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+2025-10-14,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+2025-10-14,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+2025-10-14,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+2025-10-14,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+2025-10-14,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+2025-10-14,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+2025-10-14,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,izin
+2025-10-15,1018,Reno Agata bin Hery Purnomo,A,hadir
+2025-10-15,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+2025-10-15,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+2025-10-15,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+2025-10-15,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+2025-10-15,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+2025-10-15,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+2025-10-15,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+2025-10-15,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+2025-10-15,1019,Juan Efendi bin Hery Purnomo,A,hadir
+2025-10-15,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,izin
+2025-10-15,1015,Athar Athaya Bakdas bin Abdi Satria,A,izin
+2025-10-16,1018,Reno Agata bin Hery Purnomo,A,hadir
+2025-10-16,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+2025-10-16,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+2025-10-16,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+2025-10-16,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+2025-10-16,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+2025-10-16,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+2025-10-16,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+2025-10-16,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+2025-10-16,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+2025-10-16,1019,Juan Efendi bin Hery Purnomo,A,hadir
+2025-10-16,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+2025-10-17,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+2025-10-17,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+2025-10-17,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+2025-10-17,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+2025-10-17,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+2025-10-17,1018,Reno Agata bin Hery Purnomo,A,hadir
+2025-10-17,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+2025-10-17,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+2025-10-17,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+2025-10-17,1019,Juan Efendi bin Hery Purnomo,A,hadir
+2025-10-17,1015,Athar Athaya Bakdas bin Abdi Satria,A,izin
+2025-10-17,1012,Dayinta Aida Afia binti Danang Fauzi,A,izin
+2025-10-18,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+2025-10-18,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+2025-10-18,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+2025-10-18,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+2025-10-18,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+2025-10-18,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+2025-10-18,1019,Juan Efendi bin Hery Purnomo,A,hadir
+2025-10-18,1012,Dayinta Aida Afia binti Danang Fauzi,A,izin
+2025-10-18,1015,Athar Athaya Bakdas bin Abdi Satria,A,izin
+2025-10-18,1018,Reno Agata bin Hery Purnomo,A,izin
+2025-10-18,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,alfa
+2025-10-18,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,alfa
+2025-10-20,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+2025-10-20,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+2025-10-20,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+2025-10-20,1019,Juan Efendi bin Hery Purnomo,A,hadir
+2025-10-20,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+2025-10-20,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+2025-10-20,1018,Reno Agata bin Hery Purnomo,A,hadir
+2025-10-20,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+2025-10-20,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+2025-10-20,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+2025-10-20,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+2025-10-20,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+2025-10-21,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+2025-10-21,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+2025-10-21,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+2025-10-21,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+2025-10-21,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+2025-10-21,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+2025-10-21,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+2025-10-21,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+2025-10-21,1018,Reno Agata bin Hery Purnomo,A,hadir
+2025-10-21,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+2025-10-21,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+2025-10-21,1019,Juan Efendi bin Hery Purnomo,A,hadir
+2025-10-22,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+2025-10-22,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+2025-10-22,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+2025-10-22,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+2025-10-22,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+2025-10-22,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+2025-10-22,1019,Juan Efendi bin Hery Purnomo,A,hadir
+2025-10-22,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+2025-10-22,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+2025-10-22,1018,Reno Agata bin Hery Purnomo,A,hadir
+2025-10-22,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+2025-10-22,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,izin
+2025-10-23,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+2025-10-23,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+2025-10-23,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+2025-10-23,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+2025-10-23,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+2025-10-23,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+2025-10-23,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+2025-10-23,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+2025-10-23,1019,Juan Efendi bin Hery Purnomo,A,hadir
+2025-10-23,1018,Reno Agata bin Hery Purnomo,A,hadir
+2025-10-23,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+2025-10-23,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,izin
+2025-10-24,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+2025-10-24,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+2025-10-24,1019,Juan Efendi bin Hery Purnomo,A,hadir
+2025-10-24,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+2025-10-24,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+2025-10-24,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+2025-10-24,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+2025-10-24,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+2025-10-24,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+2025-10-24,1018,Reno Agata bin Hery Purnomo,A,hadir
+2025-10-24,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+2025-10-24,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,izin
+2025-10-27,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+2025-10-27,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+2025-10-27,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+2025-10-27,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+2025-10-27,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+2025-10-27,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+2025-10-27,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+2025-10-27,1018,Reno Agata bin Hery Purnomo,A,hadir
+2025-10-27,1019,Juan Efendi bin Hery Purnomo,A,hadir
+2025-10-27,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+2025-10-27,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+2025-10-27,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+2025-10-28,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+2025-10-28,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+2025-10-28,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+2025-10-28,1019,Juan Efendi bin Hery Purnomo,A,hadir
+2025-10-28,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+2025-10-28,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+2025-10-28,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+2025-10-28,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+2025-10-28,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+2025-10-28,1018,Reno Agata bin Hery Purnomo,A,hadir
+2025-10-28,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,izin
+2025-10-28,1021,Khalid Kamayel bin Aidil Fadli,A,izin
+2025-10-01,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+2025-10-01,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+2025-10-01,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+2025-10-01,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+2025-10-01,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+2025-10-01,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+2025-10-01,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,izin
+2025-10-02,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+2025-10-02,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+2025-10-02,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+2025-10-02,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+2025-10-02,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,hadir
+2025-10-02,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+2025-10-02,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,izin
+2025-10-03,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,hadir
+2025-10-03,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+2025-10-03,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+2025-10-03,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+2025-10-03,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+2025-10-03,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,izin
+2025-10-03,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,alfa
+2025-10-04,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+2025-10-04,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+2025-10-04,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+2025-10-04,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,hadir
+2025-10-04,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+2025-10-04,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,izin
+2025-10-04,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,alfa
+2025-10-06,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+2025-10-06,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+2025-10-06,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+2025-10-06,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+2025-10-06,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,hadir
+2025-10-06,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+2025-10-06,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,izin
+2025-10-07,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+2025-10-07,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+2025-10-07,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+2025-10-07,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+2025-10-07,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,hadir
+2025-10-07,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+2025-10-07,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,izin
+2025-10-08,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+2025-10-08,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+2025-10-08,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+2025-10-08,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+2025-10-08,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+2025-10-08,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,hadir
+2025-10-08,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,izin
+2025-10-09,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+2025-10-09,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+2025-10-09,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+2025-10-09,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+2025-10-09,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+2025-10-09,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+2025-10-09,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,izin
+2025-10-10,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+2025-10-10,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+2025-10-10,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+2025-10-10,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+2025-10-10,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+2025-10-10,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+2025-10-10,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,izin
+2025-10-11,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+2025-10-11,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+2025-10-11,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+2025-10-11,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,izin
+2025-10-11,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,alfa
+2025-10-11,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,alfa
+2025-10-11,1024,Azfar Azzurra bin Ronal Saputra,B,alfa
+2025-10-13,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+2025-10-13,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+2025-10-13,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+2025-10-13,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+2025-10-13,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+2025-10-13,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+2025-10-13,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,izin
+2025-10-14,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+2025-10-14,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+2025-10-14,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+2025-10-14,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+2025-10-14,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+2025-10-14,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+2025-10-14,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,izin
+2025-10-15,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+2025-10-15,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+2025-10-15,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+2025-10-15,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+2025-10-15,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,izin
+2025-10-15,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,izin
+2025-10-15,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,izin
+2025-10-16,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,hadir
+2025-10-16,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+2025-10-16,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+2025-10-16,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+2025-10-16,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+2025-10-16,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+2025-10-16,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+2025-10-17,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+2025-10-17,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+2025-10-17,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,hadir
+2025-10-17,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+2025-10-17,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+2025-10-17,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+2025-10-17,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+2025-10-18,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+2025-10-18,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+2025-10-18,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+2025-10-18,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+2025-10-18,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,alfa
+2025-10-18,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,alfa
+2025-10-18,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,alfa
+2025-10-20,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+2025-10-20,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+2025-10-20,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+2025-10-20,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+2025-10-20,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+2025-10-20,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,hadir
+2025-10-20,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+2025-10-21,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+2025-10-21,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+2025-10-21,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+2025-10-21,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+2025-10-21,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+2025-10-21,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,hadir
+2025-10-21,1026,Muhammad Fadli Bin Syamsul Ridwan,B,izin
+2025-10-22,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+2025-10-22,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+2025-10-22,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+2025-10-22,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+2025-10-22,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,hadir
+2025-10-22,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+2025-10-22,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,alfa
+2025-10-23,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+2025-10-23,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+2025-10-23,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+2025-10-23,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,hadir
+2025-10-23,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+2025-10-23,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+2025-10-23,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,alfa
+2025-10-24,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,hadir
+2025-10-24,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+2025-10-24,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+2025-10-24,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+2025-10-24,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+2025-10-24,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+2025-10-24,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,izin
+2025-10-27,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+2025-10-27,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+2025-10-27,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+2025-10-27,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+2025-10-27,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+2025-10-27,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+2025-10-27,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,izin
+2025-10-28,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+2025-10-28,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+2025-10-28,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,hadir
+2025-10-28,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+2025-10-28,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+2025-10-28,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+2025-10-28,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+2025-10-01,1031,M. Mahardika Al-Asim bin Lasimin,C,hadir
+2025-10-01,1036,Syukur Paripurna bin Slamet Widodo,C,hadir
+2025-10-01,1030,Muhammad Royan Bin Syamsul Ridwan,C,hadir
+2025-10-01,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,hadir
+2025-10-01,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,hadir
+2025-10-01,1033,Alya Wibawa binti Andi Wibawa,C,hadir
+2025-10-01,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+2025-10-01,1029,Arief Nasrullah bin Wahyudin,C,alfa
+2025-10-03,1033,Alya Wibawa binti Andi Wibawa,C,hadir
+2025-10-03,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,hadir
+2025-10-03,1030,Muhammad Royan Bin Syamsul Ridwan,C,hadir
+2025-10-03,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,hadir
+2025-10-03,1031,M. Mahardika Al-Asim bin Lasimin,C,hadir
+2025-10-03,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+2025-10-03,1029,Arief Nasrullah bin Wahyudin,C,alfa
+2025-10-06,1031,M. Mahardika Al-Asim bin Lasimin,C,hadir
+2025-10-06,1030,Muhammad Royan Bin Syamsul Ridwan,C,hadir
+2025-10-06,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,hadir
+2025-10-06,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,hadir
+2025-10-06,1029,Arief Nasrullah bin Wahyudin,C,hadir
+2025-10-06,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+2025-10-06,1036,Syukur Paripurna bin Slamet Widodo,C,alfa
+2025-10-06,1033,Alya Wibawa binti Andi Wibawa,C,alfa
+2025-10-07,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+2025-10-07,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,hadir
+2025-10-07,1031,M. Mahardika Al-Asim bin Lasimin,C,hadir
+2025-10-07,1030,Muhammad Royan Bin Syamsul Ridwan,C,hadir
+2025-10-07,1033,Alya Wibawa binti Andi Wibawa,C,hadir
+2025-10-07,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,izin
+2025-10-07,1036,Syukur Paripurna bin Slamet Widodo,C,izin
+2025-10-07,1029,Arief Nasrullah bin Wahyudin,C,alfa
+2025-10-08,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,hadir
+2025-10-08,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+2025-10-08,1036,Syukur Paripurna bin Slamet Widodo,C,hadir
+2025-10-08,1031,M. Mahardika Al-Asim bin Lasimin,C,hadir
+2025-10-08,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,hadir
+2025-10-08,1033,Alya Wibawa binti Andi Wibawa,C,hadir
+2025-10-08,1029,Arief Nasrullah bin Wahyudin,C,hadir
+2025-10-08,1030,Muhammad Royan Bin Syamsul Ridwan,C,hadir
+2025-10-10,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,hadir
+2025-10-10,1033,Alya Wibawa binti Andi Wibawa,C,hadir
+2025-10-10,1029,Arief Nasrullah bin Wahyudin,C,hadir
+2025-10-10,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+2025-10-10,1030,Muhammad Royan Bin Syamsul Ridwan,C,hadir
+2025-10-10,1036,Syukur Paripurna bin Slamet Widodo,C,hadir
+2025-10-10,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,hadir
+2025-10-10,1031,M. Mahardika Al-Asim bin Lasimin,C,hadir
+2025-10-11,1036,Syukur Paripurna bin Slamet Widodo,C,hadir
+2025-10-11,1029,Arief Nasrullah bin Wahyudin,C,hadir
+2025-10-11,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,hadir
+2025-10-11,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+2025-10-11,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,hadir
+2025-10-11,1031,M. Mahardika Al-Asim bin Lasimin,C,hadir
+2025-10-11,1033,Alya Wibawa binti Andi Wibawa,C,hadir
+2025-10-11,1030,Muhammad Royan Bin Syamsul Ridwan,C,hadir
+2025-10-13,1031,M. Mahardika Al-Asim bin Lasimin,C,hadir
+2025-10-13,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,hadir
+2025-10-13,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+2025-10-13,1033,Alya Wibawa binti Andi Wibawa,C,hadir
+2025-10-13,1036,Syukur Paripurna bin Slamet Widodo,C,hadir
+2025-10-13,1029,Arief Nasrullah bin Wahyudin,C,hadir
+2025-10-13,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,alfa
+2025-10-13,1030,Muhammad Royan Bin Syamsul Ridwan,C,alfa
+2025-10-14,1033,Alya Wibawa binti Andi Wibawa,C,hadir
+2025-10-14,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+2025-10-14,1031,M. Mahardika Al-Asim bin Lasimin,C,hadir
+2025-10-14,1029,Arief Nasrullah bin Wahyudin,C,hadir
+2025-10-14,1036,Syukur Paripurna bin Slamet Widodo,C,hadir
+2025-10-14,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,hadir
+2025-10-14,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,hadir
+2025-10-14,1030,Muhammad Royan Bin Syamsul Ridwan,C,hadir
+2025-10-15,1033,Alya Wibawa binti Andi Wibawa,C,hadir
+2025-10-15,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+2025-10-15,1036,Syukur Paripurna bin Slamet Widodo,C,hadir
+2025-10-15,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,hadir
+2025-10-15,1029,Arief Nasrullah bin Wahyudin,C,hadir
+2025-10-15,1031,M. Mahardika Al-Asim bin Lasimin,C,hadir
+2025-10-15,1030,Muhammad Royan Bin Syamsul Ridwan,C,hadir
+2025-10-15,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,alfa
+2025-10-17,1033,Alya Wibawa binti Andi Wibawa,C,hadir
+2025-10-17,1029,Arief Nasrullah bin Wahyudin,C,hadir
+2025-10-17,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+2025-10-17,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,hadir
+2025-10-17,1030,Muhammad Royan Bin Syamsul Ridwan,C,hadir
+2025-10-17,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,hadir
+2025-10-17,1031,M. Mahardika Al-Asim bin Lasimin,C,alfa
+2025-10-17,1036,Syukur Paripurna bin Slamet Widodo,C,alfa
+2025-10-18,1036,Syukur Paripurna bin Slamet Widodo,C,hadir
+2025-10-18,1030,Muhammad Royan Bin Syamsul Ridwan,C,hadir
+2025-10-18,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,hadir
+2025-10-18,1029,Arief Nasrullah bin Wahyudin,C,hadir
+2025-10-18,1031,M. Mahardika Al-Asim bin Lasimin,C,hadir
+2025-10-18,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+2025-10-18,1033,Alya Wibawa binti Andi Wibawa,C,alfa
+2025-10-18,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,alfa
+2025-10-20,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+2025-10-20,1031,M. Mahardika Al-Asim bin Lasimin,C,hadir
+2025-10-20,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,hadir
+2025-10-20,1036,Syukur Paripurna bin Slamet Widodo,C,hadir
+2025-10-20,1033,Alya Wibawa binti Andi Wibawa,C,hadir
+2025-10-20,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,hadir
+2025-10-20,1029,Arief Nasrullah bin Wahyudin,C,alfa
+2025-10-20,1030,Muhammad Royan Bin Syamsul Ridwan,C,alfa
+2025-10-21,1029,Arief Nasrullah bin Wahyudin,C,hadir
+2025-10-21,1033,Alya Wibawa binti Andi Wibawa,C,hadir
+2025-10-21,1036,Syukur Paripurna bin Slamet Widodo,C,hadir
+2025-10-21,1031,M. Mahardika Al-Asim bin Lasimin,C,hadir
+2025-10-21,1030,Muhammad Royan Bin Syamsul Ridwan,C,hadir
+2025-10-21,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+2025-10-21,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,izin
+2025-10-21,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,alfa
+2025-10-22,1033,Alya Wibawa binti Andi Wibawa,C,hadir
+2025-10-22,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,hadir
+2025-10-22,1036,Syukur Paripurna bin Slamet Widodo,C,hadir
+2025-10-22,1030,Muhammad Royan Bin Syamsul Ridwan,C,hadir
+2025-10-22,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+2025-10-22,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,hadir
+2025-10-22,1029,Arief Nasrullah bin Wahyudin,C,hadir
+2025-10-22,1031,M. Mahardika Al-Asim bin Lasimin,C,alfa
+2025-10-24,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,hadir
+2025-10-24,1031,M. Mahardika Al-Asim bin Lasimin,C,hadir
+2025-10-24,1033,Alya Wibawa binti Andi Wibawa,C,hadir
+2025-10-24,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+2025-10-24,1036,Syukur Paripurna bin Slamet Widodo,C,hadir
+2025-10-24,1029,Arief Nasrullah bin Wahyudin,C,hadir
+2025-10-24,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,izin
+2025-10-24,1030,Muhammad Royan Bin Syamsul Ridwan,C,alfa
+2025-10-27,1031,M. Mahardika Al-Asim bin Lasimin,C,hadir
+2025-10-27,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,hadir
+2025-10-27,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+2025-10-27,1033,Alya Wibawa binti Andi Wibawa,C,hadir
+2025-10-27,1036,Syukur Paripurna bin Slamet Widodo,C,hadir
+2025-10-27,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,hadir
+2025-10-27,1029,Arief Nasrullah bin Wahyudin,C,hadir
+2025-10-27,1030,Muhammad Royan Bin Syamsul Ridwan,C,alfa
+2025-10-28,1033,Alya Wibawa binti Andi Wibawa,C,hadir
+2025-10-28,1036,Syukur Paripurna bin Slamet Widodo,C,hadir
+2025-10-28,1031,M. Mahardika Al-Asim bin Lasimin,C,hadir
+2025-10-28,1030,Muhammad Royan Bin Syamsul Ridwan,C,hadir
+2025-10-28,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,hadir
+2025-10-28,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+2025-10-28,1029,Arief Nasrullah bin Wahyudin,C,hadir
+2025-10-28,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,alfa
+2025-10-01,1037,Azka Pratama bin Wahyudin,Pra & Remaja,hadir
+2025-10-01,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-01,1039,Olghan Pradigda bin Sujatno,Pra & Remaja,hadir
+2025-10-01,1040,Adinda khoiru nisa(danang anggoro),Pra & Remaja,hadir
+2025-10-01,99812,Siswa Dummy Pra & Remaja #12,Pra & Remaja,hadir
+2025-10-01,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra & Remaja,hadir
+2025-10-01,1044,Kirania Erza Putri bin Gulba Marozik,Pra & Remaja,hadir
+2025-10-01,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra & Remaja,hadir
+2025-10-01,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra & Remaja,hadir
+2025-10-01,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-01,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-01,1038,Iklas Bima Al-Asim bin Lasimin,Pra & Remaja,alfa
+2025-10-03,1044,Kirania Erza Putri bin Gulba Marozik,Pra & Remaja,hadir
+2025-10-03,1039,Olghan Pradigda bin Sujatno,Pra & Remaja,hadir
+2025-10-03,1040,Adinda khoiru nisa(danang anggoro),Pra & Remaja,hadir
+2025-10-03,99812,Siswa Dummy Pra & Remaja #12,Pra & Remaja,hadir
+2025-10-03,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra & Remaja,hadir
+2025-10-03,1038,Iklas Bima Al-Asim bin Lasimin,Pra & Remaja,hadir
+2025-10-03,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra & Remaja,hadir
+2025-10-03,1037,Azka Pratama bin Wahyudin,Pra & Remaja,hadir
+2025-10-03,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-03,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra & Remaja,alfa
+2025-10-03,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra & Remaja,alfa
+2025-10-03,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra & Remaja,alfa
+2025-10-06,1038,Iklas Bima Al-Asim bin Lasimin,Pra & Remaja,hadir
+2025-10-06,1044,Kirania Erza Putri bin Gulba Marozik,Pra & Remaja,hadir
+2025-10-06,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-06,1037,Azka Pratama bin Wahyudin,Pra & Remaja,hadir
+2025-10-06,1040,Adinda khoiru nisa(danang anggoro),Pra & Remaja,hadir
+2025-10-06,1039,Olghan Pradigda bin Sujatno,Pra & Remaja,izin
+2025-10-06,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra & Remaja,izin
+2025-10-06,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra & Remaja,alfa
+2025-10-06,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra & Remaja,alfa
+2025-10-06,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra & Remaja,alfa
+2025-10-06,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra & Remaja,alfa
+2025-10-06,99812,Siswa Dummy Pra & Remaja #12,Pra & Remaja,alfa
+2025-10-07,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra & Remaja,hadir
+2025-10-07,1044,Kirania Erza Putri bin Gulba Marozik,Pra & Remaja,hadir
+2025-10-07,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-07,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-07,99812,Siswa Dummy Pra & Remaja #12,Pra & Remaja,hadir
+2025-10-07,1040,Adinda khoiru nisa(danang anggoro),Pra & Remaja,hadir
+2025-10-07,1039,Olghan Pradigda bin Sujatno,Pra & Remaja,hadir
+2025-10-07,1037,Azka Pratama bin Wahyudin,Pra & Remaja,hadir
+2025-10-07,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra & Remaja,hadir
+2025-10-07,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-07,1038,Iklas Bima Al-Asim bin Lasimin,Pra & Remaja,hadir
+2025-10-07,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra & Remaja,hadir
+2025-10-08,99812,Siswa Dummy Pra & Remaja #12,Pra & Remaja,hadir
+2025-10-08,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-08,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-08,1038,Iklas Bima Al-Asim bin Lasimin,Pra & Remaja,hadir
+2025-10-08,1039,Olghan Pradigda bin Sujatno,Pra & Remaja,hadir
+2025-10-08,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra & Remaja,hadir
+2025-10-08,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra & Remaja,hadir
+2025-10-08,1037,Azka Pratama bin Wahyudin,Pra & Remaja,hadir
+2025-10-08,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra & Remaja,hadir
+2025-10-08,1040,Adinda khoiru nisa(danang anggoro),Pra & Remaja,hadir
+2025-10-08,1044,Kirania Erza Putri bin Gulba Marozik,Pra & Remaja,izin
+2025-10-08,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra & Remaja,alfa
+2025-10-10,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra & Remaja,hadir
+2025-10-10,1044,Kirania Erza Putri bin Gulba Marozik,Pra & Remaja,hadir
+2025-10-10,1039,Olghan Pradigda bin Sujatno,Pra & Remaja,hadir
+2025-10-10,1038,Iklas Bima Al-Asim bin Lasimin,Pra & Remaja,hadir
+2025-10-10,99812,Siswa Dummy Pra & Remaja #12,Pra & Remaja,hadir
+2025-10-10,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-10,1037,Azka Pratama bin Wahyudin,Pra & Remaja,hadir
+2025-10-10,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-10,1040,Adinda khoiru nisa(danang anggoro),Pra & Remaja,izin
+2025-10-10,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra & Remaja,izin
+2025-10-10,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra & Remaja,izin
+2025-10-10,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra & Remaja,izin
+2025-10-11,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra & Remaja,hadir
+2025-10-11,1038,Iklas Bima Al-Asim bin Lasimin,Pra & Remaja,hadir
+2025-10-11,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra & Remaja,hadir
+2025-10-11,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-11,1039,Olghan Pradigda bin Sujatno,Pra & Remaja,hadir
+2025-10-11,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra & Remaja,hadir
+2025-10-11,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-11,1037,Azka Pratama bin Wahyudin,Pra & Remaja,alfa
+2025-10-11,99812,Siswa Dummy Pra & Remaja #12,Pra & Remaja,alfa
+2025-10-11,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra & Remaja,alfa
+2025-10-11,1040,Adinda khoiru nisa(danang anggoro),Pra & Remaja,alfa
+2025-10-11,1044,Kirania Erza Putri bin Gulba Marozik,Pra & Remaja,alfa
+2025-10-13,99812,Siswa Dummy Pra & Remaja #12,Pra & Remaja,hadir
+2025-10-13,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra & Remaja,hadir
+2025-10-13,1038,Iklas Bima Al-Asim bin Lasimin,Pra & Remaja,hadir
+2025-10-13,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra & Remaja,hadir
+2025-10-13,1037,Azka Pratama bin Wahyudin,Pra & Remaja,hadir
+2025-10-13,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-13,1044,Kirania Erza Putri bin Gulba Marozik,Pra & Remaja,hadir
+2025-10-13,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra & Remaja,hadir
+2025-10-13,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-13,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-13,1039,Olghan Pradigda bin Sujatno,Pra & Remaja,izin
+2025-10-13,1040,Adinda khoiru nisa(danang anggoro),Pra & Remaja,izin
+2025-10-14,1037,Azka Pratama bin Wahyudin,Pra & Remaja,hadir
+2025-10-14,1040,Adinda khoiru nisa(danang anggoro),Pra & Remaja,hadir
+2025-10-14,1044,Kirania Erza Putri bin Gulba Marozik,Pra & Remaja,hadir
+2025-10-14,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-14,1038,Iklas Bima Al-Asim bin Lasimin,Pra & Remaja,hadir
+2025-10-14,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra & Remaja,hadir
+2025-10-14,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra & Remaja,hadir
+2025-10-14,1039,Olghan Pradigda bin Sujatno,Pra & Remaja,hadir
+2025-10-14,99812,Siswa Dummy Pra & Remaja #12,Pra & Remaja,hadir
+2025-10-14,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra & Remaja,hadir
+2025-10-14,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-14,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra & Remaja,alfa
+2025-10-15,1044,Kirania Erza Putri bin Gulba Marozik,Pra & Remaja,hadir
+2025-10-15,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra & Remaja,hadir
+2025-10-15,1039,Olghan Pradigda bin Sujatno,Pra & Remaja,hadir
+2025-10-15,1038,Iklas Bima Al-Asim bin Lasimin,Pra & Remaja,hadir
+2025-10-15,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-15,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra & Remaja,hadir
+2025-10-15,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-15,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra & Remaja,hadir
+2025-10-15,1037,Azka Pratama bin Wahyudin,Pra & Remaja,hadir
+2025-10-15,99812,Siswa Dummy Pra & Remaja #12,Pra & Remaja,izin
+2025-10-15,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra & Remaja,izin
+2025-10-15,1040,Adinda khoiru nisa(danang anggoro),Pra & Remaja,alfa
+2025-10-17,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra & Remaja,hadir
+2025-10-17,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-17,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-17,1038,Iklas Bima Al-Asim bin Lasimin,Pra & Remaja,hadir
+2025-10-17,1037,Azka Pratama bin Wahyudin,Pra & Remaja,hadir
+2025-10-17,1039,Olghan Pradigda bin Sujatno,Pra & Remaja,hadir
+2025-10-17,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra & Remaja,hadir
+2025-10-17,1044,Kirania Erza Putri bin Gulba Marozik,Pra & Remaja,hadir
+2025-10-17,1040,Adinda khoiru nisa(danang anggoro),Pra & Remaja,hadir
+2025-10-17,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-17,99812,Siswa Dummy Pra & Remaja #12,Pra & Remaja,hadir
+2025-10-17,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra & Remaja,hadir
+2025-10-18,1037,Azka Pratama bin Wahyudin,Pra & Remaja,hadir
+2025-10-18,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-18,1039,Olghan Pradigda bin Sujatno,Pra & Remaja,hadir
+2025-10-18,1038,Iklas Bima Al-Asim bin Lasimin,Pra & Remaja,hadir
+2025-10-18,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra & Remaja,hadir
+2025-10-18,1040,Adinda khoiru nisa(danang anggoro),Pra & Remaja,hadir
+2025-10-18,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra & Remaja,alfa
+2025-10-18,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra & Remaja,alfa
+2025-10-18,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra & Remaja,alfa
+2025-10-18,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra & Remaja,alfa
+2025-10-18,99812,Siswa Dummy Pra & Remaja #12,Pra & Remaja,alfa
+2025-10-18,1044,Kirania Erza Putri bin Gulba Marozik,Pra & Remaja,alfa
+2025-10-20,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-20,1037,Azka Pratama bin Wahyudin,Pra & Remaja,hadir
+2025-10-20,99812,Siswa Dummy Pra & Remaja #12,Pra & Remaja,hadir
+2025-10-20,1044,Kirania Erza Putri bin Gulba Marozik,Pra & Remaja,hadir
+2025-10-20,1038,Iklas Bima Al-Asim bin Lasimin,Pra & Remaja,hadir
+2025-10-20,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra & Remaja,hadir
+2025-10-20,1040,Adinda khoiru nisa(danang anggoro),Pra & Remaja,hadir
+2025-10-20,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-20,1039,Olghan Pradigda bin Sujatno,Pra & Remaja,hadir
+2025-10-20,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra & Remaja,izin
+2025-10-20,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra & Remaja,izin
+2025-10-20,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra & Remaja,alfa
+2025-10-21,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra & Remaja,hadir
+2025-10-21,1038,Iklas Bima Al-Asim bin Lasimin,Pra & Remaja,hadir
+2025-10-21,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-21,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra & Remaja,hadir
+2025-10-21,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-21,99812,Siswa Dummy Pra & Remaja #12,Pra & Remaja,hadir
+2025-10-21,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra & Remaja,hadir
+2025-10-21,1040,Adinda khoiru nisa(danang anggoro),Pra & Remaja,hadir
+2025-10-21,1044,Kirania Erza Putri bin Gulba Marozik,Pra & Remaja,hadir
+2025-10-21,1039,Olghan Pradigda bin Sujatno,Pra & Remaja,hadir
+2025-10-21,1037,Azka Pratama bin Wahyudin,Pra & Remaja,hadir
+2025-10-21,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra & Remaja,izin
+2025-10-22,99812,Siswa Dummy Pra & Remaja #12,Pra & Remaja,hadir
+2025-10-22,1038,Iklas Bima Al-Asim bin Lasimin,Pra & Remaja,hadir
+2025-10-22,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-22,1039,Olghan Pradigda bin Sujatno,Pra & Remaja,hadir
+2025-10-22,1044,Kirania Erza Putri bin Gulba Marozik,Pra & Remaja,hadir
+2025-10-22,1040,Adinda khoiru nisa(danang anggoro),Pra & Remaja,hadir
+2025-10-22,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-22,1037,Azka Pratama bin Wahyudin,Pra & Remaja,hadir
+2025-10-22,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra & Remaja,hadir
+2025-10-22,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra & Remaja,hadir
+2025-10-22,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra & Remaja,hadir
+2025-10-22,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra & Remaja,izin
+2025-10-24,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra & Remaja,hadir
+2025-10-24,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-24,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra & Remaja,hadir
+2025-10-24,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-24,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra & Remaja,hadir
+2025-10-24,1038,Iklas Bima Al-Asim bin Lasimin,Pra & Remaja,hadir
+2025-10-24,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-24,1037,Azka Pratama bin Wahyudin,Pra & Remaja,hadir
+2025-10-24,1044,Kirania Erza Putri bin Gulba Marozik,Pra & Remaja,izin
+2025-10-24,1039,Olghan Pradigda bin Sujatno,Pra & Remaja,izin
+2025-10-24,1040,Adinda khoiru nisa(danang anggoro),Pra & Remaja,izin
+2025-10-24,99812,Siswa Dummy Pra & Remaja #12,Pra & Remaja,izin
+2025-10-27,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-27,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra & Remaja,hadir
+2025-10-27,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra & Remaja,hadir
+2025-10-27,1039,Olghan Pradigda bin Sujatno,Pra & Remaja,hadir
+2025-10-27,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-27,1037,Azka Pratama bin Wahyudin,Pra & Remaja,hadir
+2025-10-27,1038,Iklas Bima Al-Asim bin Lasimin,Pra & Remaja,hadir
+2025-10-27,1040,Adinda khoiru nisa(danang anggoro),Pra & Remaja,izin
+2025-10-27,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra & Remaja,izin
+2025-10-27,99812,Siswa Dummy Pra & Remaja #12,Pra & Remaja,izin
+2025-10-27,1044,Kirania Erza Putri bin Gulba Marozik,Pra & Remaja,izin
+2025-10-27,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra & Remaja,izin
+2025-10-28,1044,Kirania Erza Putri bin Gulba Marozik,Pra & Remaja,hadir
+2025-10-28,1037,Azka Pratama bin Wahyudin,Pra & Remaja,hadir
+2025-10-28,1038,Iklas Bima Al-Asim bin Lasimin,Pra & Remaja,hadir
+2025-10-28,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra & Remaja,hadir
+2025-10-28,99812,Siswa Dummy Pra & Remaja #12,Pra & Remaja,hadir
+2025-10-28,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra & Remaja,hadir
+2025-10-28,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-28,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra & Remaja,hadir
+2025-10-28,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra & Remaja,hadir
+2025-10-28,1040,Adinda khoiru nisa(danang anggoro),Pra & Remaja,izin
+2025-10-28,1039,Olghan Pradigda bin Sujatno,Pra & Remaja,izin
+2025-10-28,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra & Remaja,izin
