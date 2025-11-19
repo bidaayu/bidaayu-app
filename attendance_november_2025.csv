@@ -1,0 +1,624 @@
+tanggal,nis,nama,kelas,status
+1,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,hadir
+1,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,hadir
+1,1005,Eiji Zayyan Saputra bin Agung Saputra,0,alfa
+1,1001,Freya Alodie Maheswari binti Danang Fauzi,0,hadir
+1,1008,Sabila Putri A. binti Faisal M. Rosyid,0,hadir
+1,1002,Defta Dwi Andika Lusiana Riadi binti Teguh Supriadi,0,hadir
+1,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,sakit
+3,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,hadir
+3,1002,Defta Dwi Andika Lusiana Riadi binti Teguh Supriadi,0,hadir
+3,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,hadir
+3,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,hadir
+3,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,hadir
+3,1005,Eiji Zayyan Saputra bin Agung Saputra,0,hadir
+3,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,hadir
+4,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,hadir
+4,1008,Sabila Putri A. binti Faisal M. Rosyid,0,sakit
+4,1002,Defta Dwi Andika Lusiana Riadi binti Teguh Supriadi,0,alfa
+4,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,hadir
+4,1005,Eiji Zayyan Saputra bin Agung Saputra,0,hadir
+4,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,hadir
+4,1001,Freya Alodie Maheswari binti Danang Fauzi,0,hadir
+5,1002,Defta Dwi Andika Lusiana Riadi binti Teguh Supriadi,0,hadir
+5,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,sakit
+5,1001,Freya Alodie Maheswari binti Danang Fauzi,0,hadir
+5,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,hadir
+5,1008,Sabila Putri A. binti Faisal M. Rosyid,0,hadir
+5,1005,Eiji Zayyan Saputra bin Agung Saputra,0,alfa
+5,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,hadir
+6,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,sakit
+6,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,hadir
+6,1002,Defta Dwi Andika Lusiana Riadi binti Teguh Supriadi,0,alfa
+6,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,hadir
+6,1005,Eiji Zayyan Saputra bin Agung Saputra,0,hadir
+6,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,hadir
+6,1001,Freya Alodie Maheswari binti Danang Fauzi,0,sakit
+7,1001,Freya Alodie Maheswari binti Danang Fauzi,0,hadir
+7,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,hadir
+7,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,hadir
+7,1005,Eiji Zayyan Saputra bin Agung Saputra,0,alfa
+7,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,hadir
+7,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,hadir
+7,1008,Sabila Putri A. binti Faisal M. Rosyid,0,sakit
+8,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,hadir
+8,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,hadir
+8,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,hadir
+8,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,sakit
+8,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,sakit
+8,1005,Eiji Zayyan Saputra bin Agung Saputra,0,alfa
+8,1002,Defta Dwi Andika Lusiana Riadi binti Teguh Supriadi,0,hadir
+10,1008,Sabila Putri A. binti Faisal M. Rosyid,0,hadir
+10,1005,Eiji Zayyan Saputra bin Agung Saputra,0,hadir
+10,1001,Freya Alodie Maheswari binti Danang Fauzi,0,hadir
+10,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,sakit
+10,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,hadir
+10,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,sakit
+10,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,hadir
+11,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,hadir
+11,1005,Eiji Zayyan Saputra bin Agung Saputra,0,sakit
+11,1008,Sabila Putri A. binti Faisal M. Rosyid,0,hadir
+11,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,hadir
+11,1001,Freya Alodie Maheswari binti Danang Fauzi,0,hadir
+11,1002,Defta Dwi Andika Lusiana Riadi binti Teguh Supriadi,0,hadir
+11,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,hadir
+12,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,sakit
+12,1005,Eiji Zayyan Saputra bin Agung Saputra,0,hadir
+12,1008,Sabila Putri A. binti Faisal M. Rosyid,0,hadir
+12,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,hadir
+12,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,sakit
+12,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,hadir
+12,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,hadir
+13,1005,Eiji Zayyan Saputra bin Agung Saputra,0,sakit
+13,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,hadir
+13,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,hadir
+13,1008,Sabila Putri A. binti Faisal M. Rosyid,0,hadir
+13,1001,Freya Alodie Maheswari binti Danang Fauzi,0,hadir
+13,1002,Defta Dwi Andika Lusiana Riadi binti Teguh Supriadi,0,sakit
+13,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,hadir
+14,1001,Freya Alodie Maheswari binti Danang Fauzi,0,sakit
+14,1002,Defta Dwi Andika Lusiana Riadi binti Teguh Supriadi,0,hadir
+14,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,sakit
+14,1005,Eiji Zayyan Saputra bin Agung Saputra,0,hadir
+14,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,hadir
+14,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,hadir
+14,1008,Sabila Putri A. binti Faisal M. Rosyid,0,hadir
+15,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,hadir
+15,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,sakit
+15,1001,Freya Alodie Maheswari binti Danang Fauzi,0,hadir
+15,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,alfa
+15,1008,Sabila Putri A. binti Faisal M. Rosyid,0,hadir
+15,1005,Eiji Zayyan Saputra bin Agung Saputra,0,hadir
+15,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,hadir
+17,1003,Dinar Charisa Putri Sugeng binti Sugeng,0,hadir
+17,1009,Safaniya Putri A. binti Faisal M. Rosyid,0,sakit
+17,1002,Defta Dwi Andika Lusiana Riadi binti Teguh Supriadi,0,hadir
+17,1001,Freya Alodie Maheswari binti Danang Fauzi,0,hadir
+17,1007,Kayyisa Marfyena sholeha binti Feddy Apfana Abdillah,0,sakit
+17,1006,Arfan Rizky Wibawa bin Andi Wibawa,0,hadir
+17,1004,Syakira Leona Bilqis Binti Muhammad Nasir,0,sakit
+1,1021,Khalid Kamayel bin Aidil Fadli,A,alfa
+1,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+1,1010,Arkha Wahyu Saputra bin wahyudin,A,alfa
+1,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+1,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+1,1019,Juan Efendi bin Hery Purnomo,A,hadir
+1,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+1,1018,Reno Agata bin Hery Purnomo,A,hadir
+1,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+1,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+1,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,alfa
+1,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+3,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+3,1015,Athar Athaya Bakdas bin Abdi Satria,A,sakit
+3,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+3,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+3,1018,Reno Agata bin Hery Purnomo,A,hadir
+3,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+3,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+3,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+3,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+3,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+3,1019,Juan Efendi bin Hery Purnomo,A,hadir
+3,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+4,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+4,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+4,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+4,1018,Reno Agata bin Hery Purnomo,A,hadir
+4,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+4,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+4,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+4,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+4,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+4,1019,Juan Efendi bin Hery Purnomo,A,hadir
+4,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+4,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+5,1018,Reno Agata bin Hery Purnomo,A,hadir
+5,1019,Juan Efendi bin Hery Purnomo,A,sakit
+5,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+5,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+5,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+5,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+5,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+5,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+5,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+5,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+5,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+5,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+6,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+6,1018,Reno Agata bin Hery Purnomo,A,hadir
+6,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+6,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+6,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+6,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+6,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+6,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+6,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+6,1019,Juan Efendi bin Hery Purnomo,A,hadir
+6,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,sakit
+6,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+7,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+7,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+7,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+7,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+7,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+7,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+7,1019,Juan Efendi bin Hery Purnomo,A,hadir
+7,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+7,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+7,1018,Reno Agata bin Hery Purnomo,A,hadir
+7,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+7,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+8,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+8,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+8,1018,Reno Agata bin Hery Purnomo,A,hadir
+8,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+8,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+8,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+8,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+8,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,alfa
+8,1019,Juan Efendi bin Hery Purnomo,A,hadir
+8,1012,Dayinta Aida Afia binti Danang Fauzi,A,alfa
+8,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+8,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+10,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+10,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+10,1019,Juan Efendi bin Hery Purnomo,A,hadir
+10,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+10,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+10,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+10,1018,Reno Agata bin Hery Purnomo,A,hadir
+10,1010,Arkha Wahyu Saputra bin wahyudin,A,sakit
+10,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+10,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+10,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+10,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+11,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+11,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+11,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+11,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+11,1019,Juan Efendi bin Hery Purnomo,A,hadir
+11,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+11,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+11,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+11,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+11,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+11,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+11,1018,Reno Agata bin Hery Purnomo,A,hadir
+12,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,sakit
+12,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+12,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+12,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+12,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+12,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+12,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+12,1019,Juan Efendi bin Hery Purnomo,A,hadir
+12,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+12,1018,Reno Agata bin Hery Purnomo,A,hadir
+12,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+12,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+13,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+13,1019,Juan Efendi bin Hery Purnomo,A,hadir
+13,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+13,1018,Reno Agata bin Hery Purnomo,A,hadir
+13,1012,Dayinta Aida Afia binti Danang Fauzi,A,sakit
+13,1010,Arkha Wahyu Saputra bin wahyudin,A,sakit
+13,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+13,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+13,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+13,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+13,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+13,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+14,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+14,1019,Juan Efendi bin Hery Purnomo,A,sakit
+14,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+14,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+14,1018,Reno Agata bin Hery Purnomo,A,hadir
+14,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+14,1015,Athar Athaya Bakdas bin Abdi Satria,A,sakit
+14,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+14,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+14,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+14,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+14,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+15,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+15,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+15,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+15,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+15,1012,Dayinta Aida Afia binti Danang Fauzi,A,alfa
+15,1015,Athar Athaya Bakdas bin Abdi Satria,A,alfa
+15,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+15,1018,Reno Agata bin Hery Purnomo,A,sakit
+15,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+15,1019,Juan Efendi bin Hery Purnomo,A,hadir
+15,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+15,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+17,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,hadir
+17,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,sakit
+17,1018,Reno Agata bin Hery Purnomo,A,sakit
+17,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+17,1015,Athar Athaya Bakdas bin Abdi Satria,A,sakit
+17,1019,Juan Efendi bin Hery Purnomo,A,sakit
+17,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+17,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+17,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+17,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+17,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+17,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+18,1016,Nazril Attar Alterio Bin Muhammad Nasir,A,hadir
+18,1018,Reno Agata bin Hery Purnomo,A,hadir
+18,1011,Cyra Queenza Azzahra binti Muhammad Arifin,A,hadir
+18,1019,Juan Efendi bin Hery Purnomo,A,sakit
+18,1012,Dayinta Aida Afia binti Danang Fauzi,A,hadir
+18,1013,Febriandita Lusiana Riadi binti Teguh Supriadi,A,alfa
+18,1021,Khalid Kamayel bin Aidil Fadli,A,hadir
+18,1017,Ceisya Najja Yuand Binti Andri Albertha Pratama,A,hadir
+18,1020,Aisyah Sifa Bella bin Irwan Dwi Santoso,A,hadir
+18,1014,Gwen Syareefa Ayra binti Ronal Saputra,A,hadir
+18,1010,Arkha Wahyu Saputra bin wahyudin,A,hadir
+18,1015,Athar Athaya Bakdas bin Abdi Satria,A,hadir
+1,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,sakit
+1,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+1,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,alfa
+1,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,sakit
+1,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+1,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,alfa
+1,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+3,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+3,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+3,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+3,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,alfa
+3,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+3,1026,Muhammad Fadli Bin Syamsul Ridwan,B,sakit
+3,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+4,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+4,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+4,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+4,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+4,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+4,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+4,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,hadir
+5,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+5,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+5,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,hadir
+5,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+5,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+5,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+5,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+6,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,sakit
+6,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,sakit
+6,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,sakit
+6,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+6,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+6,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+6,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+7,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+7,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+7,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+7,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,sakit
+7,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+7,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+7,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,hadir
+8,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,alfa
+8,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,alfa
+8,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+8,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+8,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+8,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,alfa
+8,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+10,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,hadir
+10,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,sakit
+10,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+10,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+10,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+10,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+10,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+11,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+11,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+11,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+11,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+11,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+11,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+11,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,hadir
+12,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+12,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+12,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+12,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+12,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,hadir
+12,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+12,1024,Azfar Azzurra bin Ronal Saputra,B,sakit
+13,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,sakit
+13,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+13,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+13,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,hadir
+13,1026,Muhammad Fadli Bin Syamsul Ridwan,B,alfa
+13,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+13,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+14,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,sakit
+14,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,hadir
+14,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+14,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,alfa
+14,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+14,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,sakit
+14,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+15,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,alfa
+15,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+15,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,alfa
+15,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+15,1026,Muhammad Fadli Bin Syamsul Ridwan,B,alfa
+15,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+15,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+17,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+17,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+17,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+17,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+17,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+17,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,hadir
+17,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+18,1027,Rasyad Ramadhan Al-Asim bin Lasimin,B,hadir
+18,1023,Muhammad Faiq Abrarur Zahidin (Yudi Wahyudi),B,hadir
+18,1024,Azfar Azzurra bin Ronal Saputra,B,hadir
+18,1028,Muhammad Afif Akhwal Azzam bin Irwan Dwi Santoso,B,hadir
+18,1026,Muhammad Fadli Bin Syamsul Ridwan,B,hadir
+18,1025,Reizo Al-Ghazali Bakdas bin Abdi satria,B,hadir
+18,1022,Ibnu Abbas Ahnaffy bin Eko Wahyudi,B,hadir
+1,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,hadir
+1,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+1,1033,Alya Wibawa binti Andi Wibawa,C,hadir
+1,1030,Muhammad Royan Bin Syamsul Ridwan,C,hadir
+1,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,hadir
+1,1036,Syukur Paripurna bin Slamet Widodo,C,hadir
+1,1031,M. Mahardika Al-Asim bin Lasimin,C,alfa
+1,1029,Arief Nasrullah bin Wahyudin,C,hadir
+3,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,sakit
+3,1031,M. Mahardika Al-Asim bin Lasimin,C,hadir
+3,1033,Alya Wibawa binti Andi Wibawa,C,hadir
+3,1036,Syukur Paripurna bin Slamet Widodo,C,hadir
+3,1030,Muhammad Royan Bin Syamsul Ridwan,C,hadir
+3,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+3,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,sakit
+3,1029,Arief Nasrullah bin Wahyudin,C,hadir
+4,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,hadir
+4,1033,Alya Wibawa binti Andi Wibawa,C,sakit
+4,1036,Syukur Paripurna bin Slamet Widodo,C,hadir
+4,1031,M. Mahardika Al-Asim bin Lasimin,C,hadir
+4,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,hadir
+4,1030,Muhammad Royan Bin Syamsul Ridwan,C,hadir
+4,1029,Arief Nasrullah bin Wahyudin,C,hadir
+4,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,sakit
+5,1029,Arief Nasrullah bin Wahyudin,C,sakit
+5,1033,Alya Wibawa binti Andi Wibawa,C,hadir
+5,1031,M. Mahardika Al-Asim bin Lasimin,C,sakit
+5,1030,Muhammad Royan Bin Syamsul Ridwan,C,hadir
+5,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,hadir
+5,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+5,1036,Syukur Paripurna bin Slamet Widodo,C,hadir
+5,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,hadir
+7,1033,Alya Wibawa binti Andi Wibawa,C,hadir
+7,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,hadir
+7,1036,Syukur Paripurna bin Slamet Widodo,C,hadir
+7,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+7,1031,M. Mahardika Al-Asim bin Lasimin,C,sakit
+7,1029,Arief Nasrullah bin Wahyudin,C,hadir
+7,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,hadir
+7,1030,Muhammad Royan Bin Syamsul Ridwan,C,hadir
+10,1036,Syukur Paripurna bin Slamet Widodo,C,hadir
+10,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,hadir
+10,1031,M. Mahardika Al-Asim bin Lasimin,C,hadir
+10,1029,Arief Nasrullah bin Wahyudin,C,hadir
+10,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,alfa
+10,1033,Alya Wibawa binti Andi Wibawa,C,hadir
+10,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+10,1030,Muhammad Royan Bin Syamsul Ridwan,C,sakit
+11,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,sakit
+11,1033,Alya Wibawa binti Andi Wibawa,C,hadir
+11,1031,M. Mahardika Al-Asim bin Lasimin,C,sakit
+11,1029,Arief Nasrullah bin Wahyudin,C,alfa
+11,1030,Muhammad Royan Bin Syamsul Ridwan,C,sakit
+11,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,hadir
+11,1036,Syukur Paripurna bin Slamet Widodo,C,alfa
+11,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,alfa
+12,1036,Syukur Paripurna bin Slamet Widodo,C,hadir
+12,1029,Arief Nasrullah bin Wahyudin,C,hadir
+12,1030,Muhammad Royan Bin Syamsul Ridwan,C,hadir
+12,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,hadir
+12,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+12,1031,M. Mahardika Al-Asim bin Lasimin,C,hadir
+12,1033,Alya Wibawa binti Andi Wibawa,C,hadir
+12,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,hadir
+14,1036,Syukur Paripurna bin Slamet Widodo,C,hadir
+14,1031,M. Mahardika Al-Asim bin Lasimin,C,sakit
+14,1030,Muhammad Royan Bin Syamsul Ridwan,C,hadir
+14,1029,Arief Nasrullah bin Wahyudin,C,alfa
+14,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,hadir
+14,1033,Alya Wibawa binti Andi Wibawa,C,alfa
+14,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+14,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,hadir
+15,1036,Syukur Paripurna bin Slamet Widodo,C,hadir
+15,1029,Arief Nasrullah bin Wahyudin,C,hadir
+15,1030,Muhammad Royan Bin Syamsul Ridwan,C,alfa
+15,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+15,1033,Alya Wibawa binti Andi Wibawa,C,alfa
+15,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,hadir
+15,1031,M. Mahardika Al-Asim bin Lasimin,C,hadir
+15,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,alfa
+17,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,alfa
+17,1031,M. Mahardika Al-Asim bin Lasimin,C,hadir
+17,1029,Arief Nasrullah bin Wahyudin,C,hadir
+17,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,hadir
+17,1030,Muhammad Royan Bin Syamsul Ridwan,C,hadir
+17,1036,Syukur Paripurna bin Slamet Widodo,C,hadir
+17,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+17,1033,Alya Wibawa binti Andi Wibawa,C,hadir
+18,1031,M. Mahardika Al-Asim bin Lasimin,C,hadir
+18,1029,Arief Nasrullah bin Wahyudin,C,hadir
+18,1034,Fadhil Muhammad Al Barkah bin Yudi Wahyudi,C,hadir
+18,1035,Lintang yusuf pamungkas bin Danang Puji Anggoro,C,hadir
+18,1030,Muhammad Royan Bin Syamsul Ridwan,C,hadir
+18,1036,Syukur Paripurna bin Slamet Widodo,C,hadir
+18,1032,Ashar Iqhlak Haradist bin Hery Purnomo,C,alfa
+18,1033,Alya Wibawa binti Andi Wibawa,C,hadir
+1,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra Remaja,hadir
+1,1044,Kirania Erza Putri bin Gulba Marozik,Pra Remaja,hadir
+1,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra Remaja,hadir
+1,1038,Iklas Bima Al-Asim bin Lasimin,Pra Remaja,sakit
+1,1039,Olghan Pradigda bin Sujatno,Pra Remaja,hadir
+1,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra Remaja,hadir
+1,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra Remaja,sakit
+1,1040,Adinda khoiru nisa(danang anggoro),Pra Remaja,hadir
+1,1037,Azka Pratama bin Wahyudin,Pra Remaja,hadir
+1,2000,Random Student 0,Pra Remaja,hadir
+1,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra Remaja,hadir
+1,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra Remaja,sakit
+3,1037,Azka Pratama bin Wahyudin,Pra Remaja,hadir
+3,2000,Random Student 0,Pra Remaja,hadir
+3,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra Remaja,hadir
+3,1044,Kirania Erza Putri bin Gulba Marozik,Pra Remaja,hadir
+3,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra Remaja,hadir
+3,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra Remaja,hadir
+3,1039,Olghan Pradigda bin Sujatno,Pra Remaja,hadir
+3,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra Remaja,sakit
+3,1038,Iklas Bima Al-Asim bin Lasimin,Pra Remaja,hadir
+3,1040,Adinda khoiru nisa(danang anggoro),Pra Remaja,hadir
+3,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra Remaja,hadir
+3,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra Remaja,hadir
+4,1044,Kirania Erza Putri bin Gulba Marozik,Pra Remaja,hadir
+4,2000,Random Student 0,Pra Remaja,hadir
+4,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra Remaja,hadir
+4,1039,Olghan Pradigda bin Sujatno,Pra Remaja,hadir
+4,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra Remaja,hadir
+4,1037,Azka Pratama bin Wahyudin,Pra Remaja,hadir
+4,1040,Adinda khoiru nisa(danang anggoro),Pra Remaja,hadir
+4,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra Remaja,hadir
+4,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra Remaja,hadir
+4,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra Remaja,hadir
+4,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra Remaja,hadir
+4,1038,Iklas Bima Al-Asim bin Lasimin,Pra Remaja,hadir
+5,1037,Azka Pratama bin Wahyudin,Pra Remaja,hadir
+5,1044,Kirania Erza Putri bin Gulba Marozik,Pra Remaja,hadir
+5,1039,Olghan Pradigda bin Sujatno,Pra Remaja,hadir
+5,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra Remaja,sakit
+5,2000,Random Student 0,Pra Remaja,sakit
+5,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra Remaja,hadir
+5,1038,Iklas Bima Al-Asim bin Lasimin,Pra Remaja,hadir
+5,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra Remaja,hadir
+5,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra Remaja,hadir
+5,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra Remaja,sakit
+5,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra Remaja,hadir
+5,1040,Adinda khoiru nisa(danang anggoro),Pra Remaja,hadir
+7,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra Remaja,hadir
+7,1044,Kirania Erza Putri bin Gulba Marozik,Pra Remaja,hadir
+7,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra Remaja,sakit
+7,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra Remaja,hadir
+7,1038,Iklas Bima Al-Asim bin Lasimin,Pra Remaja,sakit
+7,2000,Random Student 0,Pra Remaja,hadir
+7,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra Remaja,hadir
+7,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra Remaja,sakit
+7,1037,Azka Pratama bin Wahyudin,Pra Remaja,sakit
+7,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra Remaja,hadir
+7,1039,Olghan Pradigda bin Sujatno,Pra Remaja,hadir
+7,1040,Adinda khoiru nisa(danang anggoro),Pra Remaja,hadir
+10,2000,Random Student 0,Pra Remaja,sakit
+10,1044,Kirania Erza Putri bin Gulba Marozik,Pra Remaja,hadir
+10,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra Remaja,hadir
+10,1037,Azka Pratama bin Wahyudin,Pra Remaja,hadir
+10,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra Remaja,alfa
+10,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra Remaja,hadir
+10,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra Remaja,hadir
+10,1040,Adinda khoiru nisa(danang anggoro),Pra Remaja,hadir
+10,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra Remaja,sakit
+10,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra Remaja,sakit
+10,1038,Iklas Bima Al-Asim bin Lasimin,Pra Remaja,sakit
+10,1039,Olghan Pradigda bin Sujatno,Pra Remaja,hadir
+11,1039,Olghan Pradigda bin Sujatno,Pra Remaja,hadir
+11,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra Remaja,hadir
+11,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra Remaja,hadir
+11,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra Remaja,hadir
+11,1038,Iklas Bima Al-Asim bin Lasimin,Pra Remaja,hadir
+11,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra Remaja,hadir
+11,1040,Adinda khoiru nisa(danang anggoro),Pra Remaja,hadir
+11,1037,Azka Pratama bin Wahyudin,Pra Remaja,hadir
+11,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra Remaja,hadir
+11,2000,Random Student 0,Pra Remaja,hadir
+11,1044,Kirania Erza Putri bin Gulba Marozik,Pra Remaja,hadir
+11,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra Remaja,hadir
+12,1040,Adinda khoiru nisa(danang anggoro),Pra Remaja,hadir
+12,2000,Random Student 0,Pra Remaja,sakit
+12,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra Remaja,sakit
+12,1038,Iklas Bima Al-Asim bin Lasimin,Pra Remaja,hadir
+12,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra Remaja,sakit
+12,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra Remaja,sakit
+12,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra Remaja,hadir
+12,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra Remaja,hadir
+12,1039,Olghan Pradigda bin Sujatno,Pra Remaja,hadir
+12,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra Remaja,hadir
+12,1044,Kirania Erza Putri bin Gulba Marozik,Pra Remaja,hadir
+12,1037,Azka Pratama bin Wahyudin,Pra Remaja,hadir
+14,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra Remaja,sakit
+14,1037,Azka Pratama bin Wahyudin,Pra Remaja,sakit
+14,1039,Olghan Pradigda bin Sujatno,Pra Remaja,hadir
+14,1044,Kirania Erza Putri bin Gulba Marozik,Pra Remaja,hadir
+14,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra Remaja,sakit
+14,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra Remaja,hadir
+14,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra Remaja,hadir
+14,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra Remaja,sakit
+14,2000,Random Student 0,Pra Remaja,alfa
+14,1040,Adinda khoiru nisa(danang anggoro),Pra Remaja,sakit
+14,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra Remaja,hadir
+14,1038,Iklas Bima Al-Asim bin Lasimin,Pra Remaja,hadir
+15,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra Remaja,sakit
+15,1039,Olghan Pradigda bin Sujatno,Pra Remaja,sakit
+15,1037,Azka Pratama bin Wahyudin,Pra Remaja,hadir
+15,1040,Adinda khoiru nisa(danang anggoro),Pra Remaja,sakit
+15,2000,Random Student 0,Pra Remaja,hadir
+15,1044,Kirania Erza Putri bin Gulba Marozik,Pra Remaja,hadir
+15,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra Remaja,sakit
+15,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra Remaja,hadir
+15,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra Remaja,alfa
+15,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra Remaja,sakit
+15,1038,Iklas Bima Al-Asim bin Lasimin,Pra Remaja,hadir
+15,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra Remaja,hadir
+17,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra Remaja,hadir
+17,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra Remaja,hadir
+17,1039,Olghan Pradigda bin Sujatno,Pra Remaja,hadir
+17,1044,Kirania Erza Putri bin Gulba Marozik,Pra Remaja,hadir
+17,2000,Random Student 0,Pra Remaja,hadir
+17,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra Remaja,hadir
+17,1038,Iklas Bima Al-Asim bin Lasimin,Pra Remaja,hadir
+17,1037,Azka Pratama bin Wahyudin,Pra Remaja,hadir
+17,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra Remaja,hadir
+17,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra Remaja,hadir
+17,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra Remaja,hadir
+17,1040,Adinda khoiru nisa(danang anggoro),Pra Remaja,sakit
+18,1045,Muhammad Ibnu Didan bin Danang Puji Anggoro,Pra Remaja,hadir
+18,1037,Azka Pratama bin Wahyudin,Pra Remaja,hadir
+18,1039,Olghan Pradigda bin Sujatno,Pra Remaja,hadir
+18,1040,Adinda khoiru nisa(danang anggoro),Pra Remaja,hadir
+18,1047,Ferdinan Fienza Rochman bin Yasser Fauzan Abdul Rochman,Pra Remaja,hadir
+18,1043,Devio Arshavin Ichsani bin Dayat Ichsani,Pra Remaja,hadir
+18,1042,Devan Arshenio Ichsani bin Dayat Ichsani,Pra Remaja,hadir
+18,1038,Iklas Bima Al-Asim bin Lasimin,Pra Remaja,hadir
+18,2000,Random Student 0,Pra Remaja,sakit
+18,1044,Kirania Erza Putri bin Gulba Marozik,Pra Remaja,hadir
+18,1041,Chelsea Irma Aulia bin Irwan Dwi Santoso,Pra Remaja,hadir
+18,1046,Rivaldo Davi Fadhilah bin Dayat Ichsani,Pra Remaja,hadir
